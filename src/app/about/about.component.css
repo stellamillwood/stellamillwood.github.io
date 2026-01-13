@@ -1,0 +1,36 @@
+.about-container {
+    text-align: left;
+    margin: 2rem auto;
+    padding: 1rem;
+
+    .intro-container {
+      display: flex;
+    }
+  
+    .profile-pic {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .bullet-points {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 1rem;
+    }
+  
+    .contact-info {
+      margin-top: 2rem;
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
