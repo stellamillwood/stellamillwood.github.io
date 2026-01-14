@@ -3,23 +3,28 @@
 
   <button mat-button [routerLink]="['/']">About</button>
 
-  <button mat-button [matMenuTriggerFor]="projectsMenu" #menuTrigger="matMenuTrigger">
+  <button
+    mat-button
+    [routerLink]="['/projects']"
+    [matMenuTriggerFor]="projectsMenu"
+    #menuTrigger="matMenuTrigger"
+  >
     Projects
     <mat-icon>{{ menuTrigger.menuOpen ? 'expand_less' : 'expand_more' }}</mat-icon>
   </button>
 
   <mat-menu #projectsMenu="matMenu">
-    <button mat-menu-item [routerLink]="['/projects/project1']">Project 1</button>
-    <button mat-menu-item [routerLink]="['/projects/project2']">Project 2</button>
-    <button mat-menu-item [routerLink]="['/projects/project3']">Project 3</button>
-    <button mat-menu-item [routerLink]="['/projects/project4']">Project 4</button>
-    <button mat-menu-item [routerLink]="['/projects/project5']">Project 5</button>
-    <button mat-menu-item [routerLink]="['/projects/project6']">Project 6</button>
-    <button mat-menu-item [routerLink]="['/projects/project7']">Project 7</button>
-    <button mat-menu-item [routerLink]="['/projects/project8']">Project 8</button>
-    <button mat-menu-item [routerLink]="['/projects/project9']">Project 9</button>
-    <button mat-menu-item [routerLink]="['/projects/project10']">Project 10</button>
-    <button mat-menu-item [routerLink]="['/projects/project11']">Project 11</button>
+    <button mat-menu-item [routerLink]="['/projects/design-system-agoodid']">Design System for Websites</button>
+    <button mat-menu-item [routerLink]="['/projects/digital-stewardship']">Digital Stewardship</button>
+    <button mat-menu-item [routerLink]="['/projects/flourish']">Flourish</button>
+    <button mat-menu-item [routerLink]="['/projects/imrs']">IMRS</button>
+    <button mat-menu-item [routerLink]="['/projects/acdc']">ACDC</button>
+    <button mat-menu-item [routerLink]="['/projects/g-force']">G-force</button>
+    <button mat-menu-item [routerLink]="['/projects/drop-the-beat']">Drop the Beat</button>
+    <button mat-menu-item [routerLink]="['/projects/theses']">Theses</button>
+    <button mat-menu-item [routerLink]="['/projects/tajma']">Tajma</button>
+    <button mat-menu-item [routerLink]="['/projects/stella-budget-prognos']">Stella Budget & Prognos</button>
+    <button mat-menu-item [routerLink]="['/projects/digi-post']">DigiPost</button>
   </mat-menu>
 </mat-toolbar>
 
