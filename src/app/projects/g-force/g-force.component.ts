@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './g-force.component.css',
 })
 export class GForceComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "G-Force";
+  subtitle = "G-Force";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "G-Force";
 }

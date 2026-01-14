@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './design-system-agoodid.component.css',
 })
 export class DesignSystemAGoodIdComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "Design System for Websites";
+  subtitle = "Design System for Websites";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "Design System for Websites";
 }

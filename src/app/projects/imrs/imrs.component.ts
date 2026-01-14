@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './imrs.component.css',
 })
 export class IMRSComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "IMRS";
+  subtitle = "IMRS";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "IMRS";
 }

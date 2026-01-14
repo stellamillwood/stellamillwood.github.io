@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './tajma.component.css',
 })
 export class TajmaComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "Tajma";
+  subtitle = "Tajma";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "Tajma";
 }

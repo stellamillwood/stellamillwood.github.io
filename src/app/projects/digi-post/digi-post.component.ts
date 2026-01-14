@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './digi-post.component.css',
 })
 export class DigiPostComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "DigiPost";
+  subtitle = "DigiPost";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "DigiPost";
 }

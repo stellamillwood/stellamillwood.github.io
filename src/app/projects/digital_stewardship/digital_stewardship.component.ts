@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './digital_stewardship.component.css',
 })
 export class DigitalStewardshipComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "Digital Stewardship";
+  subtitle = "Digital Stewardship";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "Digital Stewardship";
 }

@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './stella-budget-prognos.component.css',
 })
 export class StellaBudgetPrognosComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
+  title = "Stella Budget & Prognos";
+  subtitle = "Stella Budget & Prognos";
   image = "assets/card_image.png";
-  description = "The Shiba Inu is the smallest...";
+  description = "Stella Budget & Prognos";
 }
