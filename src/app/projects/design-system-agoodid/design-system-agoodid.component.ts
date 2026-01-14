@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
+
 
 @Component({
   selector: 'app-design-system-agoodid',
-  imports: [],
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './design-system-agoodid.component.html',
-  styleUrl: './design-system-agoodid.component.css',
+  styleUrls: ['./design-system-agoodid.component.css'],
 })
 export class DesignSystemAGoodIdComponent {
-  title = "Design System for Websites";
-  subtitle = "Design System for Websites";
-  image = "assets/card_image.png";
-  description = "Design System for Websites";
-}
+  project: Project = PROJECTS.find(p => p.route === "/projects/design-system-agoodid")!;
+  }

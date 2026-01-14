@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
+
 
 @Component({
   selector: 'app-theses',
-  imports: [],
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './theses.component.html',
   styleUrl: './theses.component.css',
 })
 export class ThesesComponent {
-  title = "Theses";
-  subtitle = "Theses";
-  image = "assets/card_image.png";
-  description = "Theses";
+    project: Project = PROJECTS.find(p => p.route === "/projects/theses")!;
 }

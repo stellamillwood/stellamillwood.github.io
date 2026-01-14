@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
+
 
 @Component({
   selector: 'app-digital-stewardship',
-  imports: [],
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './digital_stewardship.component.html',
   styleUrl: './digital_stewardship.component.css',
 })
 export class DigitalStewardshipComponent {
-  title = "Digital Stewardship";
-  subtitle = "Digital Stewardship";
-  image = "assets/card_image.png";
-  description = "Digital Stewardship";
+  project: Project = PROJECTS.find(p => p.route === "/projects/digital-stewardship")!;
 }

@@ -1,4 +1,8 @@
-<h1>{{ title }}</h1>
-<h2>{{ subtitle }}</h2>
-<img [src]="image" alt="{{ title }}" />
-<p>{{ description }}</p>
+<vertical-menu>
+    <div class="content">
+      <h1>{{ project.title }}</h1>
+      <h2>{{ project.subtitle }}</h2>
+      <img [src]="project.image" />
+      <p>{{ project.description }}</p>
+    </div>
+  </vertical-menu>

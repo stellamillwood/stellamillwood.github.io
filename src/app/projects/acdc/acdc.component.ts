@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
 
 @Component({
-  selector: 'app-project5',
-  imports: [],
+  selector: 'app-acdc',
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './acdc.component.html',
   styleUrl: './acdc.component.css',
 })
 export class ACDCComponent {
-  title = "ACDC";
-  subtitle = "ACDC";
-  image = "assets/card_image.png";
-  description = "ACDC";
+  project: Project = PROJECTS.find(p => p.route === "/projects/acdc")!;
 }

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
+
 
 @Component({
   selector: 'app-drop-the-beat',
-  imports: [],
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './drop-the-beat.component.html',
   styleUrl: './drop-the-beat.component.css',
 })
 export class DropTheBeatComponent {
-  title = "Drop the Beat";
-  subtitle = "AR music sharing app";
-  image = "assets/card_image.png";
-  description = "Drop the Beat";
+  project: Project = PROJECTS.find(p => p.route === "/projects/drop-the-beat")!;
 }

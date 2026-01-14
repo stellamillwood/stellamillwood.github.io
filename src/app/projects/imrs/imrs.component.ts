@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { PROJECTS, Project } from '../projects-data';
+import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.component';
+
 
 @Component({
   selector: 'app-imrs',
-  imports: [],
+  standalone: true,
+  imports: [VerticalMenuComponent],
   templateUrl: './imrs.component.html',
   styleUrl: './imrs.component.css',
 })
 export class IMRSComponent {
-  title = "IMRS";
-  subtitle = "IMRS";
-  image = "assets/card_image.png";
-  description = "IMRS";
+  project: Project = PROJECTS.find(p => p.route === "/projects/imrs")!;
 }
