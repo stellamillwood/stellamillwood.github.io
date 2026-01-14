@@ -1,8 +1,16 @@
 .clickable-card {
-  max-width: 20rem;
+  max-width: 30rem;
+  background-color: #FFFFFF;
   cursor: pointer;
   transition: transform 0.2s;
 }
+
+.card-image {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 30rem;
+}
+
 
 .clickable-card:hover {
   transform: scale(1.02);

@@ -6,26 +6,9 @@
   <button
     mat-button
     [routerLink]="['/projects']"
-    [matMenuTriggerFor]="projectsMenu"
-    #menuTrigger="matMenuTrigger"
   >
     Projects
-    <mat-icon>{{ menuTrigger.menuOpen ? 'expand_less' : 'expand_more' }}</mat-icon>
   </button>
-
-  <mat-menu #projectsMenu="matMenu">
-    <button mat-menu-item [routerLink]="['/projects/design-system-agoodid']">Design System for Websites</button>
-    <button mat-menu-item [routerLink]="['/projects/digital-stewardship']">Digital Stewardship</button>
-    <button mat-menu-item [routerLink]="['/projects/flourish']">Flourish</button>
-    <button mat-menu-item [routerLink]="['/projects/imrs']">IMRS</button>
-    <button mat-menu-item [routerLink]="['/projects/acdc']">ACDC</button>
-    <button mat-menu-item [routerLink]="['/projects/g-force']">G-force</button>
-    <button mat-menu-item [routerLink]="['/projects/drop-the-beat']">Drop the Beat</button>
-    <button mat-menu-item [routerLink]="['/projects/theses']">Theses</button>
-    <button mat-menu-item [routerLink]="['/projects/tajma']">Tajma</button>
-    <button mat-menu-item [routerLink]="['/projects/stella-budget-prognos']">Stella Budget & Prognos</button>
-    <button mat-menu-item [routerLink]="['/projects/digi-post']">DigiPost</button>
-  </mat-menu>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
