@@ -36,4 +36,58 @@ export class ProjectsComponent {
   stellabudgetPronos = new StellaBudgetPrognosComponent();
   tajma = new TajmaComponent();
   theses = new ThesesComponent();
+
+  projects = [
+    {
+      title: "ACDC",
+      subtitle: "ACDC",
+      image: "assets/drop-beat.png",
+      description: "Some description here...",
+      route: "/projects/acdc"
+    },
+    {
+      title: "Design System for Websites",
+      subtitle: "Design System for Websites",
+      image: "assets/gforce.png",
+      description: "Some description here...",
+      route: "/projects/design-system-agoodid"
+    },
+    {
+      title: "DigiPost",
+      subtitle: "DigiPost",
+      image: "assets/drop-beat.png",
+      description: "Some description here...",
+      route: "/projects/digi-post"
+    },
+    {
+      title: "Digital Stewardship",
+      subtitle: "Flight tracking",
+      image: "assets/gforce.png",
+      description: "Some description here...",
+      route: "/projects/g-force"
+    },
+    {
+      title: "Drop the Beat",
+      subtitle: "AR music sharing app",
+      image: "assets/drop-beat.png",
+      description: "Some description here...",
+      route: "/projects/drop-the-beat"
+    },
+    {
+      title: "G Force",
+      subtitle: "Flight tracking",
+      image: "assets/gforce.png",
+      description: "Some description here...",
+      route: "/projects/g-force"
+    },
+    {
+      title: "Drop the Beat",
+      subtitle: "AR music sharing app",
+      image: "assets/drop-beat.png",
+      description: "Some description here...",
+      route: "/projects/drop-the-beat"
+    }
+    
+  ];
+  
 }

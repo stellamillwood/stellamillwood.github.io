@@ -2,7 +2,17 @@
     max-width: 60rem;
   }
   
-  .example-header-image {
-    background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.02);
+}
+  
