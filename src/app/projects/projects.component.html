@@ -1,13 +1,26 @@
 <div class="main-container">
     <h1>Projects</h1>
     <div class="card-grid">
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
-    </div>
+        <project-card
+            [title]="droptheBeat.title"
+            [subtitle]="droptheBeat.subtitle"
+            [image]="droptheBeat.image"
+            [description]="droptheBeat.description"
+        ></project-card>
+      
+        <project-card
+            [title]="acdc.title"
+            [subtitle]="acdc.subtitle"
+            [image]="acdc.image"
+            [description]="acdc.description"
+        ></project-card>
+      
+        <project-card
+            [title]="imrs.title"
+            [subtitle]="imrs.subtitle"
+            [image]="imrs.image"
+            [description]="imrs.description"
+        ></project-card>
+      </div>
+      
 </div>

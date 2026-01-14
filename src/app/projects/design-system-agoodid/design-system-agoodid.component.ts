@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './design-system-agoodid.component.css',
 })
 export class DesignSystemAGoodIdComponent {
-
+  title = "Drop the Beat";
+  subtitle = "AR music sharing app";
+  image = "assets/card_image.png";
+  description = "The Shiba Inu is the smallest...";
 }
