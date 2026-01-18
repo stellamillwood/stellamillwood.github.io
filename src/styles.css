@@ -46,7 +46,7 @@ body {
   box-sizing: border-box;
 }
 
-.page-container img:not(.card-img):not(.no-style) {
+.page-container img:not(.card-img) {
   width: 75%;
   height: auto;
   display: block;
@@ -66,11 +66,4 @@ body {
 
 .caption {
   font-style: italic;
-}
-
-.clickable-card {
-  height: 24rem;       /* fixed height */
-  overflow: hidden;    /* cuts off extra text */
-  display: flex;
-  flex-direction: column;
 }

@@ -1,9 +1,18 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .clickable-card {
-  max-width: 30rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 
 .card-image {
   padding-left: 1rem;
