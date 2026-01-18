@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { DesignSystemAGoodIdComponent } from './projects/design-system-agoodid/design-system-agoodid.component';
+import { DesignSystemAGoodIdComponent } from './projects/agoodsite/agoodsite.component';
 import { DigitalStewardshipComponent } from './projects/digital_stewardship/digital_stewardship.component';
 import { FlourishComponent } from './projects/flourish/flourish.component';
 import { IMRSComponent } from './projects/imrs/imrs.component';

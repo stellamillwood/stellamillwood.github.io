@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DesignSystemAGoodIdComponent } from './design-system-agoodid.component';
+import { DesignSystemAGoodIdComponent } from './agoodsite.component';
 
 describe('DesignSystemAGoodIdComponent', () => {
   let component: DesignSystemAGoodIdComponent;

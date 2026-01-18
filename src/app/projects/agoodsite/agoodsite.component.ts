@@ -4,12 +4,12 @@ import { VerticalMenuComponent } from 'src/app/vertical-menu/vertical-menu.compo
 
 
 @Component({
-  selector: 'app-design-system-agoodid',
+  selector: 'app-agoodsite',
   standalone: true,
   imports: [VerticalMenuComponent],
-  templateUrl: './design-system-agoodid.component.html',
-  styleUrls: ['./design-system-agoodid.component.css'],
+  templateUrl: './agoodsite.component.html',
+  styleUrls: ['./agoodsite.component.css'],
 })
 export class DesignSystemAGoodIdComponent {
-  project: Project = PROJECTS.find(p => p.route === "/projects/design-system-agoodid")!;
+  project: Project = PROJECTS.find(p => p.route === "/projects/agoodsite")!;
   }
