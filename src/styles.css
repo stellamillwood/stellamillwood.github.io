@@ -87,6 +87,14 @@ body {
   height: 100%;
 }
 
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #333;               /* text color */
+  font-size: 0.9rem;
+}
+
 .caption {
   font-style: italic;
 }
