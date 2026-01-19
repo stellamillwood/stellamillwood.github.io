@@ -34,7 +34,7 @@ body {
 
 /* Page container aligns relative to the full page */
 .page-container {
-  max-width: 80rem;
+  max-width: 65rem;
   margin: 0 auto;     /* centers the container horizontally */
   padding: 2rem 1rem;
   box-sizing: border-box;
