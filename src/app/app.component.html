@@ -1,15 +1,18 @@
 <mat-toolbar color="primary">
-  <span style="flex: 1 1 auto;">Stella Millwood</span>
+  <div class="horizontal-menu">
+    <span class="toolbar-title">Stella Millwood</span>
 
-  <button mat-button [routerLink]="['/']">About</button>
+    <button mat-button [routerLink]="['/']">About</button>
 
-  <button
-    mat-button
-    [routerLink]="['/projects']"
-  >
-    Projects
-  </button>
+    <button
+      mat-button
+      [routerLink]="['/projects']"
+    >
+      Projects
+    </button>
+  </div>
 </mat-toolbar>
+
 
 <div class="page-layout">
   <ng-content></ng-content>

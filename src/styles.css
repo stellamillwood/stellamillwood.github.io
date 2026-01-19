@@ -32,12 +32,23 @@ body {
   margin-left: 16px;
 }
 
+.horizontal-menu {
+  max-width: 65rem;       /* match your page container */
+  margin: 0 auto;         /* center horizontally */
+  width: 100%;
+  display: flex;          /* horizontal layout */
+  align-items: center;    /* vertical alignment */
+  padding: 0 1rem;        /* optional horizontal padding */
+  box-sizing: border-box;
+}
+
 /* Page container aligns relative to the full page */
 .page-container {
   max-width: 65rem;
   margin: 0 auto;     /* centers the container horizontally */
   padding: 2rem 1rem;
   box-sizing: border-box;
+
 }
 
 .page-container img.img-border {
@@ -98,3 +109,7 @@ body {
 .caption {
   font-style: italic;
 }
+
+.app-toolbar .mat-button {
+  font-size: 1rem;
+}  

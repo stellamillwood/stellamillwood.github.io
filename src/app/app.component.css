@@ -1,0 +1,8 @@
+.toolbar-title {
+    font-size: 1.5rem;    /* adjust as needed */
+    font-weight: 600;      /* optional: makes it bold */
+    color: #333333;          /* match toolbar text color */
+    flex: 1 1 auto;
+  }
+
+  
