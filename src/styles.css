@@ -18,6 +18,8 @@ body {
   flex-direction: row;
 }
   
+
+/* Removed vertical-menu. Might bring back later. */
 /* Make vertical menu fixed to the left on desktop */
 .vertical-menu {
   position: fixed; /* overlay it, not in normal flow */
