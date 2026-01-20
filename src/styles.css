@@ -44,23 +44,32 @@ body {
   margin: 0 auto;     /* centers the container horizontally */
   padding: 2rem 1rem;
   box-sizing: border-box;
+}
 
+.single-project-page h1,
+.single-project-page h2,
+.single-project-page h3,
+.single-project-page p,
+.single-project-page ul, 
+.single-project-page ol {
+  max-width: 75%;  
+  margin: 0 auto 1.5rem auto; 
 }
 
 .page-container img.img-border {
-  max-width: 75%;
+  max-width: 100%;
   width: 100%;
   height: auto;
-  margin: 3rem auto;
+  margin: 4rem auto 1rem auto;
   display: block;
   border-radius: 8px;
   border: 2px solid rgba(0,0,0,0.1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* 1. SIZE + CENTER (all images except card-img) */
-.page-container img:not(.card-img) {
-  width: 75%;
+
+.page-container img {
+  width: 100%;
   height: auto;
   display: block;
   margin: 4rem auto;
@@ -80,7 +89,7 @@ body {
 }
 
 .video-wrapper {
-  width: 75%;
+  width: 100%;
   margin: 4rem auto;
   position: relative;
   padding-top: 56.25%; /* 16:9 aspect ratio */
@@ -102,8 +111,13 @@ body {
   font-size: 0.9rem;
 }
 
-.caption {
+.page-container .caption {
+  width: 100%;
+  max-width: 100%;  
+  margin-bottom: 1rem;   
+  text-align: left;
   font-style: italic;
+  font-size: medium;
 }
 
 .app-toolbar .mat-button {
@@ -114,7 +128,15 @@ body {
   .page-container img:not(.card-img),
   .page-container img.img-border {
     margin: 0 auto !important;  /* override desktop margins */
-    width: 90%;                 /* optional */
+  }
+
+  .page-container h1,
+  .page-container h2,
+  .page-container h3,
+  .page-container p,
+  .page-container ul, 
+  .page-container ol {
+    max-width: 100%;  
   }
 
   .video-wrapper {
