@@ -1,11 +1,20 @@
 .about-container {
-    text-align: left;
-    margin: 4rem auto 4rem auto;
-
+  
     .intro-container {
+      text-align: left;
       display: flex;
       align-items: center;     /* vertical centering */
       margin: 4rem auto 4rem auto;
+    }
+
+    /* Mobile / narrow screens */
+    @media (max-width: 850px) {
+      .intro-container {
+        flex-direction: column;   /* stack */
+        align-items: flex-start;  /* or center, depends on your design */
+        text-align: left;         /* or center */
+        margin: 0 auto 0 auto;
+      }
     }
 
     .intro-text-container {
@@ -17,7 +26,6 @@
       height: 20rem;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1rem;
     }
 
     .bullet-points {
