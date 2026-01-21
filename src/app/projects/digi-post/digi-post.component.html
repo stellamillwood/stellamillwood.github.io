@@ -2,6 +2,70 @@
 <div class="page-container single-project-page">
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
-  <img [src]="project.image" class="img-border"/>
-  <p>{{ project.description }}</p>
+
+  <p>This was a two-day project where I pitched in to design the UI of EMPLOYERS new AI-based postal system. Every day the government agency 
+    receives thousands of documents from citizens, ranging from medical documents to documents proving right to unemployment funds (A-kassa).
+    As I had previosuly worked as temporary product owner on the old postal system, I had knowledge of the users, 
+    their tasks and what the new system was trying to solve. </p>
+  
+  <h2>The Users and Their Tasks</h2>
+  <p>Users are administrators at EMPLOYER and handle incoming documents sent through post by citizens daily. They handle the documents by
+    identifying the social security number (personnummer), identifying what type of document it is and importing it manually to the correct system 
+    accordingly to be handled by the next administrator. The AI technology speeds up this process by identifying the infromation more efficiently. 
+    The new system creates a queue of document where a user can assign or unassign themselves documents, 
+    rather than choose a file in a file manager as  it previously worked. It also allows the user to send the document to the correct 
+    system through the click of a button, rather than importing it manually. The development team did not consist of any UX-designers, 
+    but they had a sketch in Figma, as seen below. 
+  </p>
+
+  <img [src]="'assets/digi-post/old-sketches'" class="img-border"/>
+  <p class="caption">The old queue page (arbetskö) and working space page (arbetsyta).</p>
+
+  <h2>My contributions</h2>
+  <h3>The Queue Page and Working Space Page</h3>
+  <p>I redesigned the UI using EMPLOYERS design system and applied our design patterns. For the queue (arbetskö) and work space (arbetsyta) view I focused on language 
+    clarity and adding explanations when needed. I focused on making the developers' conceptual model visible to users. For example, in the original sketch
+    the system said "Put back 117 document in the queue" followed by a button "Put back" and I changed that to "You have 43 unhandled documents" 
+    followed by a button for "Put back documents in queue". The developer team were suggesting adding a "User Support" page, but I chose to add 
+    preambles to communicate the purpose of the different pages. I think this was important because the developer teams' model for what the 
+    interaction step by step should look like was quite innovative, but also new to the users. I also made their UI elements more space efficient. 
+    The excess space could either be left as is for a more clean look, or they can add content if need in the future - which is more likely.
+    The updated pages are seen below. 
+  </p>
+
+  <img [src]="'assets/digi-post/new-sketches-que-working-space'" class="img-border"/>
+  <p class="caption">The new queue page (arbetskö) and working space page (arbetsyta).</p>
+
+  <h3>The Document Page</h3>
+  <p>In the view for actually handling the document data I worked with the hierarchy and using different level headings and sections to 
+    categorize form fields. I also added heading when needed. For example the original sketch had input field "Month" and "Year", but no heading to 
+    explain what the month and date were in reference to. I added "Aktivitetsrapporten gäller för" to make it clear to users that the month and date
+    were in reference to the period during which the citizen was applying for unemployment funds. This was particularly important considering there
+    were multiple field for filling out date. I also changed the button text at the bottom from "Delete" to "Download and delete" to make it clear to
+    the users what would happened if they pressed the button. The old page next to the updated page are seen below. 
+  </p>
+
+  <img [src]="'assets/digi-post/new-sketches-documents'" class="img-border"/>
+  <p class="caption">The old document page next to the new document page.</p>
+
+  <p>I also added field and form validation - informing users whether any information was 
+    incorrect or missing. If the users pressed "Register document" I also added information at the bottom of the page to show users that the document 
+    was successfully registered and that the user was now looking at a new document, and could view the old document using the ID (which was part of the 
+    text).
+  </p>
+
+  <img [src]="'assets/digi-post/new-sketches-form-validation'" class="img-border"/>
+  <p class="caption">Form validation in the new design.</p>
+
+  <img [src]="'assets/digi-post/new-sketches-register-success'" class="img-border"/>
+  <p class="caption">A successful registration.</p>
+
+  <h2>In Retrospect...</h2>
+  <p>I would've been cautious to make the Queue page and the Working space page two separate pages. I think the page where you see the 
+    document could be considered the Working Space rendering the Working Space page unneccessary, but this is something that could be a topic for 
+    user testing. In general I also think the copy has room for improvement. I would have wanted to make the button "Download and delete" even more 
+    lear to users since the idea behind it may be a bit unclear. I also wasn't a fan of showing the message "The document was registered successfully. 
+    You are now looking at a new document" since I felt that wasn't the most clear way to communicate that it was a new document the users was looking 
+    at (they all look very similar).
+  </p>
 </div>
