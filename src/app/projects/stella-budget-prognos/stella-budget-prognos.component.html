@@ -4,4 +4,61 @@
   <h2>{{ project.subtitle }}</h2>
   <img [src]="project.image" class="img-border"/>
   <p>{{ project.description }}</p>
+
+  <h2>Stakeholder Need</h2>
+  <p>The stakeholder group that initiated the project consisted mainly of business controllers and managers at Swedish Public Employment Office's 
+    headquarters. Originally, they requested that I create dashboards on the start page of the budget application, which would allow for easy access
+  overviews of the budget status, making it easier to take action if need be. However, in dialogue with the group it became more clear that navigation 
+  and information structure were, according to them, problem areas. At this point it was clear to me that we needed a better understanding of the problem.</p>
+
+  <h2>Exploratory Interviews and User Tests</h2>
+  <p>There was a worry in some departments that the user group would not be adequately represented, as some felt that earlier initiatives had been 
+    skewed toward a headquarter-centric perspective. Due to that, and due to the applications requirement of omderate to high level expertise, I 
+    collaborated with a business controller (high expertise) to create an interview and user test guide that that oriented at identifying painpoints. The
+    business controller worked at a department that felt they had been underrepresented in earlier intitatives. That department's work is central to the
+    government agency's core mission. There were multiple colleagues at headquarter's who confirmed a tendency to skew earlier initatives to an HQ-centric 
+    perspective. We also identified 10 relevant users from across the organization who would represent the user group. A UX designer from a different 
+    department than mine took notes because recordings were prohibited, and we collected user data during two weeks.</p>
+  <ol>
+    <li>10 users</li>
+    <li>60 minute individual sessions</li>
+    <li>Three different roles: business controllers, operations coordinators and managers</li>
+    <li>Three departments represented</li>
+  </ol>
+
+  <h2>Problem Analysis and Definitions</h2>
+  <ol>
+    <li>Thematic Analysis / Affinity diagram</li>
+    <li>Two analysis iterations - one human-generated and one AI-generated</li>
+    <li>Dialogue with business controller clarify user responses</li>
+    <li>Problem statements</li>
+    <li></li>
+  </ol>
+
+  <img [src]="'assets/stella-budget-prognos/image.png'" class="img-border"/>
+  <p class="caption">Affinity map of the results.</p>
+
+  <p>I expected task complexity to vary greatly between roles, but the analysis also made clear that the complexity varied greatly between departments due 
+    to different types of budgets (personel and general maintenance budget versus volume budget of welfare programs). This made me reflect on what
+    requirements I had on myself to understand the work. I set up soft boundaries for myself tha tI could adhere to in order to understand user problems
+    without deep diving into the data.</p>
+
+  <p>The results also showed that there was quite a lot of manual data handling going on - creating bottlenecks. Examples include users using calculators
+    to calculate values between reports in the system, importing the data into Excel and doing most work there - putting pressure on keeping data
+    synchronized between Excel and the budget application, and the use of Powerpoint for data visualization rather than the budget application's built in
+    visualization capabilities. 
+  </p>
+
+  <p>Based on the findings I created problem statements aiming at being concise and actionable.
+  </p>
+  <img [src]="'assets/stella-budget-prognos/image.png'" class="img-border"/>
+  <p class="caption">Problem statements</p>
+
+  <h2>Next Steps</h2>
+  <p>In the coming three months I will work on transforming these problem statements into user tested design updates in production. My general plan is
+    to conduct a structured brainstorming with users, and then narrow down the ideas using a matrix for technical feasbility versus problem relevance together 
+    with developers. I want to strike a balance between responding to the users needs in terms of the tasks they perfomr in the application for which
+    they lack proper support today, and responding to the stakeholder request of simplifying the overviews by means of dashboards. Through quick iterations 
+    with users I want to move from sketches to a stakeholder accepted high fidelity prototype that can be put into production.</p>
+
 </div>
