@@ -1,45 +1,69 @@
 .about-container {
-  
-    .intro-container {
-      text-align: left;
-      display: flex;
-      align-items: center;     /* vertical centering */
-      margin: 4rem auto 4rem auto;
-    }
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem;
 
-    /* Mobile / narrow screens */
-    @media (max-width: 850px) {
-      .intro-container {
-        flex-direction: column;   /* stack */
-        align-items: flex-start;  /* or center, depends on your design */
-        text-align: left;         /* or center */
-        margin: 0 auto 0 auto;
-      }
+  @media (max-width: 850px) {
+    margin-top: 2rem;
+  }
+
+  .intro-container {
+    display: flex;
+    align-items: center;   
+    justify-content: flex-start; 
+
+    video {
+      flex: 0 0 auto;
+      width: 40%;  
+      height: auto;
+      display: block;
+      aspect-ratio: 1 / 1; /* ensures video stays square */
     }
 
     .intro-text-container {
       padding-left: 8%;
-    }
-  
-    .profile-pic {
-      width: 20rem;
-      height: 20rem;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 60%;  /* keeps text width proportional */
     }
 
-    .bullet-points {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      gap: 1rem;
+    @media (max-width: 850px) {
+      flex-direction: column; 
+      align-items: flex-start; /* aligns children left */
+
+      video {
+        width: 80%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1; /* square */
+        margin-bottom: 1.5rem; /* spacing between video and text */
+      }
+
+      .intro-text-container {
+        padding-left: 0;
+        text-align: left;
+        width: 100%;
+      }
     }
   }
+
+  .profile-pic {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .bullet-points {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
 
 .contact-info {
   a {
     text-decoration: none;
     color: inherit;
+    
     &:hover {
       text-decoration: underline;
     }
@@ -47,8 +71,7 @@
 }
 
 .contact-details {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   padding: 3rem;
   width: 100vw;
   position: relative;
@@ -56,12 +79,8 @@
   transform: translateX(-50%);
   background: #f8efe8;
   display: flex;
-  flex-direction: column; /* <- stacks items */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-
-  
-  
