@@ -61,9 +61,9 @@ export interface Project {
     },
     {
       title: "Flourish",
-      subtitle: "A task-based mobile application for improving mental wellness using simulated augmented reality (AR) for a growing plant.",
+      subtitle: "A task-based mobile application for improving mental wellness using simulated AR for a growing plant.",
       image: "assets/flourish/flourish-logo.png",
-      description: "The application allows a user to complete daily tasks in order to improve their mental health during the covid-19-pandemic. As tasks are completed, the user’s own digital plant grows. The plant can be viewed in simulated AR. The project’s duration was 3 months in 2020 and was part of the university course Project Work in Interaction Design. ",
+      description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing teeth or getting out of bed. The project was developed as a Figma prototype over 3 months in 2020 as part of the course Project Work in Interaction Design.",
       route: "/projects/flourish"
     },
     {
@@ -77,7 +77,7 @@ export interface Project {
       title: "IMRS",
       subtitle: "A mixed reality (MR) experience comparing various input methods for MR from an ease-of-use perspective.",
       image: "assets/imrs/imrs-logo.png",
-      description: "My team and I developed a mixed reality tabletop experience in collaboration with Ericsson. We transformed parts of Ericsson’s existing VR experience into MR. We studied the pros and cons of different input methods in MR and provided a list of design recommendations. The project’s duration was 3 months in 2022 and was part of the course Project Course in Creative and Immersive Technology.",
+      description: "IMRS is a mixed reality tabletop experience developed in collaboration with Ericsson to explore how different input methods affect user interaction in MR. The project combined physical and virtual elements using projection mapping, hand tracking, and Arduino sensors. Our Research-through-Design approach included observations, interviews, and questionnaires to evaluate usability and inform design recommendations for smoother interactions in MR environments. The project ran for 3 months in 2022 as part of the course Project Course in Creative and Immersive Technology.",
       route: "/projects/imrs"
     },
   
