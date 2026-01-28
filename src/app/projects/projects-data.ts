@@ -17,7 +17,7 @@ export interface Project {
       route: "/projects/tajma", 
       tableData: [ 
         { label: "Users", value: "All 11 000+ employees at Arbetsförmedlingen" },
-        { label: "Frontend Framework", value: "Angular" },
+        { label: "Technology", value: "Angular based web application" },
         { label: "My Responsibilities", value: "UX design and frontend development" } ]
     }, 
     {
@@ -41,7 +41,7 @@ export interface Project {
       route: "/projects/digi-post", 
       tableData: [ 
         { label: "Users", value: "Administrators at Arbetsförmedlingen who process incoming post from citizens" },
-        { label: "My Role", value: "UI Designer" },
+        { label: "My Role", value: "UI designer" },
         { label: "Duration", value: "2 days" } ]
     },
     {
@@ -51,8 +51,8 @@ export interface Project {
       description: "I was hired by Stockholm University to assist their research on exploring how waste sorting practices could improve through collective care for shared residential recycling rooms. I designed and built a project web application that allows users to (1) choose recycling room based on fullness, and (2) coordinate large waste pickups through carpooling.",
       route: "/projects/digital-stewardship", 
       tableData: [ 
-        { label: "Users", value: "Residents of a Housing Association in Northern Stockholm" },
-        { label: "My Role", value: "UX Design and Frontend development" },
+        { label: "Users", value: "Residents of a housing association in northern Stockholm" },
+        { label: "My Role", value: "UX design and frontend development" },
         { label: "Duration", value: "10 months" }, 
         { label: "Methods", value: "Interviews, workshops, user journeys, wireframes and interactive prototypes" }]
     },

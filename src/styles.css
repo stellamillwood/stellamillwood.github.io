@@ -74,7 +74,6 @@ body {
 
 
 .page-container img.img-border {
-  max-width: 100%;
   width: 100%;
   height: auto;
   margin: 4rem auto 1rem auto;
@@ -86,7 +85,6 @@ body {
 
 
 .page-container img:not(.card-img) {
-  width: 100%;
   height: auto;
   display: block;
   margin: 4rem auto 1rem auto;
@@ -134,7 +132,7 @@ body {
   width: 100%;
   max-width: 100%;  
   margin-bottom: 3rem;   
-  text-align: left;
+  text-align: center;
   font-style: italic;
   font-size: medium;
 }
@@ -162,6 +160,10 @@ body {
   width: auto;
   object-fit: contain;
 
+}
+
+.img-small {
+  max-width: 75%;
 }
 
 .intro-table .mat-mdc-header-row { 
