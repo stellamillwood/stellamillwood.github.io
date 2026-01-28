@@ -5,6 +5,7 @@ export interface Project {
     description: string;
     route: string;
     hidden?: boolean;
+    tableData?: { label: string; value: string }[];
   }
   
   export const PROJECTS: Project[] = [
@@ -13,15 +14,22 @@ export interface Project {
       subtitle: "Time reporting tool used daily by thousands of users at Swedish Public Emplyment Office.",
       image: "assets/tajma/tajma-logo.png",
       description: "Tajma is a time-reporting tool for internal users at Swedish Public Employment Office. It is built as a web application in Angular",
-      route: "/projects/tajma"
+      route: "/projects/tajma", 
+      tableData: [ 
+        { label: "Some facts", value: "Fact" },
+        { label: "Some facts", value: "Fact" },
+        { label: "Some facts", value: "Fact" } ]
     }, 
     {
       title: "Stella Budget & Prognos",
-      subtitle: "Redesign of Swedish Public Emplyment Office's web application for budget and prognosis.",
+      subtitle: "Redesign of Swedish Public Employment Office's web application for budget and prognosis.",
       image: "assets/stella-budget-prognos/stella-budget-prognos-logo.png",
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
-      route: "/projects/stella-budget-prognos"
-      
+      route: "/projects/stella-budget-prognos", 
+      tableData: [ 
+        { label: "Some fact", value: "Fact" },
+        { label: "Some facts", value: "Fact" },
+        { label: "Some facts", value: "Fact" } ]      
     }, 
     {
       title: "DigiPost",

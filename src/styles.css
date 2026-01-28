@@ -57,9 +57,15 @@ body {
 .single-project-page p,
 .single-project-page ul, 
 .single-project-page ol, 
-.single-project-page a {
+.single-project-page a{
   max-width: 75%;  
   margin: 0 auto 1.5rem auto; 
+}
+
+.single-project-page project-info-table { 
+  display: block; 
+  max-width: 75%; 
+  margin: 0 auto 2rem auto; 
 }
 
 .single-project-page a {
@@ -155,6 +161,11 @@ body {
   height: 100%;
   width: auto;
   object-fit: contain;
+
+}
+
+.intro-table .mat-mdc-header-row { 
+  display: none !important; 
 }
 
 
