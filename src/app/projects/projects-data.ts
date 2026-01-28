@@ -40,7 +40,7 @@ export interface Project {
       description: "DigiPost",
       route: "/projects/digi-post", 
       tableData: [ 
-        { label: "Users", value: "Employees at Arbetsförmedlingen who process incoming post from citizens" },
+        { label: "Users", value: "Administrators at Arbetsförmedlingen who process incoming post from citizens" },
         { label: "My Role", value: "UI Designer" },
         { label: "Duration", value: "2 days" } ]
     },

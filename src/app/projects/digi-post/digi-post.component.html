@@ -8,40 +8,50 @@
     I was familiar with the users, their tasks, and the challenges the new system aimed to address.</p> -->
 
   <project-info-table [data]="project.tableData"></project-info-table>
+  
+  <h2>Context & Problem</h2>
+  <p>Administrators manually process large volumes of incoming post from citizens daily by identifying documents' key information and redirecting them 
+    to the correct processing systems. This work is repetitive, inefficient and error-prone.</p>
+  
+  <h2>The Development Team's Original Sketches and Ideas</h2>
+  <p>The new postal system uses AI to identify key document information and users (1) validate the accuracy and (2) redirect documents to 
+    the correct system through a single-click button. The development team created the Figma sketch below to visualize a new work flow, which I 
+    used as a starting point.</p>
 
-  <p>When I reviewed the initial sketches, two things immediately stood out:</p>
+  <img [src]="'assets/digi-post/old-work-page.png'" class="img-border" alt="The old queue and work space page."/>
+  <p class="caption">The old start page with queue (arbetskö) and work space (arbetsyta). The queue is the area with "Aktivitetsrapport (52).</p>
+
+  <h2>UI Challenges</h2>
   <ul>
     <li>the information architecture was unclear for users who need to work quickly, and </li>
     <li>the system’s conceptual model was hidden, requiring users to potentially guess how the new queue and workflow were intended to function. </li>
   </ul>
   <p>My work focused on clarifying these two aspects through language, hierarchy, and layout.</p>
-  
-  <h2>The Users and Their Tasks</h2>
-  <p>Administrators process incoming documents by manually identifying the citizen’s social security number, determining the document type, and 
-    importing it into the correct system. The new AI system speeds up this process and introduces a queue where users can assign and unassign 
-    documents, with one-click routing to the appropriate system. The development team had created a Figma sketch (as seen below), which I used 
-    as a starting point.</p>
 
-  <img [src]="'assets/digi-post/old-work-page.png'" class="img-border" alt="The old queue and work space page."/>
-  <p class="caption">The old start page with queue (arbetskö) and work space (arbetsyta). The queue is the area with "Aktivitetsrapport (52).</p>
+  <h2>My Contributions</h2>
+  <ul>
+    <li>Applied our internal design system and patterns to reduce ambiguity, especially in form validation</li>
+    <li>Reworked copy to clarify system status and interaction outcomes, and align language with the intended workflow</li>
+    <li>Structured form hierarchy with sections and headings</li>
+    <li>Added user feedback from submitting document</li>
+  </ul>
 
-  <h2>My contributions</h2>
-  <h3>The Queue and Work Space</h3>
+  <!--<h3>The Queue and Work Space</h3>
   <p>I used our internal design system and applied established design patterns. Working to reduce ambiguity, I reworked copy 
     (“Put back 43 documents…” → “You have 43 unhandled documents…” and “Put back” → “Put back 43 documents in the queue”) 
     so users would understand how many documents remained unhandled and what action the button performed. 
     This aligned language with the workflow the development team intended.
-  </p>
+  </p>-->
 
   <!-- <img [src]="'assets/digi-post/new-queue-page.png'" class="img-border" alt="The redesigned start page with queue"/>
   <p class="caption">The redesigned queue (arbetskö) in the start page.</p> -->
   <img [src]="'assets/digi-post/new-work-page.png'" class="img-border" alt="The redesigned work space page"/>
   <p class="caption">The redesigned work space page (arbetsyta).</p>
 
-  <h3>The Document Handling Page</h3>
+  <!--<h3>The Document Handling Page</h3>
   <p>I structured form fields into sections with hierarchical headings. For instance, the original sketch had “Month” and “Year” fields with no context. 
     I added “Aktivitetsrapporten gäller för” to clarify that the dates refer to the relevant application period. One button was updated from 
-    “Delete” to “Download and delete” for clarity. Below you can see first the old document handling page followed by the updated one.</p>
+    “Delete” to “Download and delete” for clarity. Below you can see first the old document handling page followed by the updated one.</p>-->
 
   <img [src]="'assets/digi-post/old-doc-page.png'" class="img-border" alt="Old document page"/>
   <p class="caption">Old document handling page.</p>
@@ -51,10 +61,10 @@
   
 
 
-  <p>I added field validation to alert users to missing or incorrect information.  When users pressed “Register document” a 
+  <!--<p>I added field validation to alert users to missing or incorrect information.  When users pressed “Register document” a 
     confirmation message indicated that the document was successfully registered and the user was now viewing a new document. 
     You can check that out below.
-  </p>
+  </p> -->
 
   <img [src]="'assets/digi-post/new-doc-page-error-message.png'" class="img-border" alt="Form validation in the new document page."/>
   <p class="caption">Form validation in the new design.</p>
