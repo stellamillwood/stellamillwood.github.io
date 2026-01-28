@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
   export class BeforeAfterComponent { 
     @Input() beforeSrc!: string; 
     @Input() afterSrc!: string; 
+
+    @Input() beforeCaption = '';
+    @Input() afterCaption = '';
+
     
     state: 'before' | 'after' = 'after'; 
   }

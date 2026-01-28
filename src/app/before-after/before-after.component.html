@@ -8,4 +8,6 @@
         [src]="state === 'before' ? beforeSrc : afterSrc" 
         class="img-border" 
         alt="Before and after comparison" /> 
+
+    <p class="caption"> {{ state === 'before' ? beforeCaption : afterCaption }} </p>
 </div>

@@ -8,17 +8,19 @@
 
   <project-info-table [data]="project.tableData"></project-info-table>
 
-  <app-before-after
-    [beforeSrc]="'assets/tajma/old/delivered-week.png'"
-    [afterSrc]="'assets/tajma/new/Weekview_editable.png'">
-  </app-before-after>
-  
-  <h3>Highlights</h3>
+  <h2>Highlights</h2>
   <ul>
     <li>Migrated the front end to the internal design system, improving layout consistency, accessibility, and long-term code sustainability.</li>
     <li>Improved table accessibility for visually impaired users through iterative user testing and close collaboration with accessibility specialists.</li>
   </ul>
 
+  <app-before-after
+    [beforeSrc]="'assets/tajma/old/delivered-week.png'"
+    [afterSrc]="'assets/tajma/new/Weekview_editable.png'"
+    beforeCaption="In this view users cannot edit time input because the week has already been so called delivered to the economy department."
+    afterCaption="Updated version of Tajma using the design system, no lock button and including a collapsible task description (chevron).">
+  </app-before-after>
+  
   <h2>Challenges</h2>
   <!--<h2>Before Design System Migration and Accessibility Updates</h2>-->
   <p>When I joined, the application had some aesthetic limitations, did not meet accessibility standards, and the front-end codebase was 
@@ -27,8 +29,8 @@
 
   <!-- <img [src]="'assets/tajma/old/open-week.png'" class="img-border"/>
   <p class="caption">Users can edit time because the week is neither locked nor sent to the economy department. </p>-->
-  <img [src]="'assets/tajma/old/delivered-week.png'" class="img-border"/>
-  <p class="caption">In this view users cannot edit time input because the week has already been "delivered" to the economy department.</p>
+  <!--<img [src]="'assets/tajma/old/delivered-week.png'" class="img-border"/>
+  <p class="caption">In this view users cannot edit time input because the week has already been "delivered" to the economy department.</p>-->
 
   <h2>Design System Migration</h2>
   <p>Migrating to the internal design system involved occasional technical gaps. I contributed improvements directly to the open-source components 
@@ -45,8 +47,8 @@
     change to users.</p>
 
   
-  <img [src]="'assets/tajma/new/Weekview_editable.png'" class="img-border"/>
-  <p class="caption">Updated version of Tajma using the design system, no lock button and including a collapsible task description (chevron).</p>
+  <!--<img [src]="'assets/tajma/new/Weekview_editable.png'" class="img-border"/>
+  <p class="caption">Updated version of Tajma using the design system, no lock button and including a collapsible task description (chevron).</p>-->
 
   <!-- Calendar images
   <div class="image-row">
@@ -87,10 +89,12 @@
     dialogue with experts, and code adjustments, I made the application usable for visually impaired users and improved accessibility more broadly. 
     Notably, most fixes involved correcting standard code patterns rather than special accommodations.</p>
 
-  <img [src]="'assets/tajma/voiceover/weekview-voiceover-before.png'" class="img-border"/>
-  <p class="caption">The older version with a visualization of the screen reader's interpretations, along with navigation issues.</p>
-  <img [src]="'assets/tajma/voiceover/weekview-voiceover-after.png'" class="img-border"/>
-  <p class="caption">The newer version of Tajma with a visualization of the screen reader's interpretations, along with navigation improvements. </p>
+  <app-before-after
+    [beforeSrc]="'assets/tajma/voiceover/weekview-voiceover-before.png'"
+    [afterSrc]="'assets/tajma/voiceover/weekview-voiceover-after.png'"
+    beforeCaption="The older version with a visualization of the screen reader's interpretations, along with navigation issues."
+    afterCaption="The newer version of Tajma with a visualization of the screen reader's interpretations, along with navigation improvements.">
+  </app-before-after>
 
    <!-- Mobile and tablet images (choosing to remove this because I dont't want to take credit for someone else's work)
   <h2>Responsive design</h2>
