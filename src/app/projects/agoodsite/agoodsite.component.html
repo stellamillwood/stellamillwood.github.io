@@ -3,6 +3,9 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
   <p>{{ project.description }}</p>
+  
+  <project-info-table [data]="project.tableData"></project-info-table>
+
   <img [src]="'assets/agoodsite/agoodsite-pages.png'"/>
   <p>As part of this work, I conducted a competitive analysis of museum websites and identified design patterns 
     in how different organizations solve UI and interaction issues. I then applied this knowledge to evaluate 

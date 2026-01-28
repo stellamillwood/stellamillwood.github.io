@@ -3,6 +3,11 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
   <p [innerHTML]="project.description"></p>
+
+  <project-info-table [data]="project.tableData"></project-info-table>
+
+  <p>The project intentionally leans into novelty—AR isn’t needed to share music—but the medium made the experience spatial, surprising, and fun.</p>
+
   <img [src]="'assets/drop-the-beat/drop-the-beat-three-pages.png'" />
   <h2>Video</h2>
   <div class="video-wrapper">

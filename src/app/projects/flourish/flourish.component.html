@@ -3,6 +3,8 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
   <p>{{ project.description }}</p>
+
+  <project-info-table [data]="project.tableData"></project-info-table>
   
   <img [src]="'assets/flourish/flourish-three-pages.png'"/>
   <p class="caption">Screens showing plant friends, daily tasks and plant growth.</p>

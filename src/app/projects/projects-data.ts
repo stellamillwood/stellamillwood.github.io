@@ -30,7 +30,7 @@ export interface Project {
         { label: "Users", value: "Business controllers, operations coordinators and managers at Arbetsförmedlingen" },
         { label: "My Responsibilities", value: "UX research, design direction, and stakeholder alignment" },
         { label: "Constraints", value: "No recordings, domain complexity, external development" }, 
-        { label: "Duration", value: "6 months" }, 
+        { label: "Duration", value: "6 months 2025-2026" }, 
         { label: "Methods", value: "Exploratory interviews, user tests, affinity diagram, prioritization matrices" }]  
     }, 
     {
@@ -42,7 +42,7 @@ export interface Project {
       tableData: [ 
         { label: "Users", value: "Administrators at Arbetsförmedlingen who process incoming post from citizens" },
         { label: "My Role", value: "UI designer" },
-        { label: "Duration", value: "2 days" } ]
+        { label: "Duration", value: "2 days in 2025" } ]
     },
     {
       title: "Digital Stewardship",
@@ -53,7 +53,7 @@ export interface Project {
       tableData: [ 
         { label: "Users", value: "Residents of a housing association in northern Stockholm" },
         { label: "My Role", value: "UX design and frontend development" },
-        { label: "Duration", value: "10 months" }, 
+        { label: "Duration", value: "10 months in 2022-2023" }, 
         { label: "Methods", value: "Interviews, workshops, user journeys, wireframes and interactive prototypes" }]
     },
     {
@@ -66,38 +66,62 @@ export interface Project {
     },
     {
       title: "AGoodSite",
-      subtitle: "AGoodId's design system created in Figma for their clients' websites.",
+      subtitle: "Figma-based Design System for Museum Websites.",
       image: "assets/agoodsite/agoodsite-logo.png",
-      description: "AGoodId is a Stockholm-based design bureau where I completed a full-time, six-month design internship in 2021. My main assignment was to create a web-based design system for the company’s clients to ensure cohesive and efficient design processes across projects.",
-      route: "/projects/agoodsite"
+      description: "AGoodId is a Stockholm-based design bureau where I completed a full-time design internship. My main assignment was to create a web-based design system for the company’s clients (mainly museums) to ensure cohesive and efficient design processes across projects.",
+      route: "/projects/agoodsite", 
+      tableData: [ 
+        { label: "Users", value: "Art Directors at the design bureau (directly) and their clients (indirectly)" },
+        { label: "Methods & Tools", value: "Figma (autolayout, variants, styleguide and more) and competitive analysis" },
+        { label: "Duration", value: "6 months in 2021" }, 
+        { label: "My role", value: "UI designer" }]
     },
     {
       title: "Drop the Beat",
-      subtitle: "AR music-sharing concept for a more social campus",
+      subtitle: "AR Music-Sharing",
       image: "assets/drop-the-beat/drop-the-beat-logo.png",
-      description: "Drop the Beat is a playful AR concept that lets students “drop” music around campus for others to discover. The idea grew from exploring how hybrid study reduced spontaneous encounters at DSV, and how immersive tech could make campus feel more social again. Users could spot virtual speakers in AR, tap them to listen, watch them animate, and optionally connect with the creator through social platforms.<br><br>The project intentionally leans into novelty—AR isn’t needed to share music—but the medium made the experience spatial, surprising, and fun. It was developed during a 2-month university course in 2021 called <em>Introduction to Design for Creative and Immersive Technology</em>.",
-      route: "/projects/drop-the-beat"
+      description: "A playful concept that lets students “drop” music around campus for others to discover. The idea grew from exploring how hybrid study reduced spontaneous encounters at university, and how immersive tech could make campus feel more social again. Users could spot virtual speakers in AR, tap them to listen, watch them animate, and optionally connect with the creator through social platforms.",
+      route: "/projects/drop-the-beat", 
+      tableData: [ 
+        { label: "Users", value: "Remote and in-person students at Stockholm University" },
+        { label: "Technologies and Tools", value: "Augmented Reality (AR), Unity and Figma" },
+        { label: "Duration", value: "2 months in 2021" }, 
+        { label: "My role", value: "UX and UI designer" }]
     },
     {
       title: "Flourish",
       subtitle: "A task-based mobile application for improving mental wellness using simulated AR for a growing plant.",
       image: "assets/flourish/flourish-logo.png",
-      description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing teeth or getting out of bed. The project was developed as a Figma prototype over 3 months in 2020 as part of the course Project Work in Interaction Design.",
-      route: "/projects/flourish"
+      description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing teeth or getting out of bed.",
+      route: "/projects/flourish", 
+      tableData: [ 
+        { label: "Users", value: "Remote students at Stockholm University" },
+        { label: "Context", value: "Covid-19 pandemic, social distancing and mental wellness" },
+        { label: "Technologies and Tools", value: "Augmented Reality (AR) simulation and Figma" },
+        { label: "Duration", value: "3 months in 2020" }, 
+        { label: "Methods", value: "user tests, workshops, empathy maps, brainstorming" }]
     },
     {
       title: "G-Force",
-      subtitle: "A VR experience exploring sensory alignment with tangible objects.",
+      subtitle: "A VR Experience Exploring Sensory Alignment with Tangible Objects",
       image: "assets/g-force/g-force-logo.png",
-      description: "G-Force is a VR experience where users kick a physical ball and see its motion mirrored in virtual reality. The ball behaves differently depending on the planet the user is on (Earth, Moon, or Mars), reflecting changes in gravity. Users can switch planets by interacting with a simple UI and traveling through a wormhole. The project was developed over 3 months in 2022 within the course Designing for Emerging Technologies.",
-      route: "/projects/g-force"
+      description: "G-Force is a VR experience where users kick a physical ball and see its motion mirrored in virtual reality. The ball behaves differently depending on the planet the user is on (Earth, Moon, or Mars), reflecting changes in gravity. Users can switch planets by interacting with a simple UI and traveling through a wormhole.",
+      route: "/projects/g-force", 
+      tableData: [ 
+        { label: "Technologies and Tools", value: "Virtual Reality (VR), Unity, sensors, physcial props and Figma" },
+        { label: "My role", value: "UX and UI design" }, 
+        { label: "Duration", value: "3 months in 2022" }]
     },
     {
       title: "IMRS",
-      subtitle: "A mixed reality (MR) experience comparing various input methods for MR from an ease-of-use perspective.",
+      subtitle: "A Mixed Reality Experience for Comparing Input Methods",
       image: "assets/imrs/imrs-logo.png",
-      description: "IMRS is a mixed reality tabletop experience developed in collaboration with Ericsson to explore how different input methods affect user interaction in MR. The project combined physical and virtual elements using projection mapping, hand tracking, and Arduino sensors. Our Research-through-Design approach included observations, interviews, and questionnaires to evaluate usability and inform design recommendations for smoother interactions in MR environments. The project ran for 3 months in 2022 as part of the course Project Course in Creative and Immersive Technology.",
-      route: "/projects/imrs"
+      description: "IMRS is a mixed reality tabletop experience developed in collaboration with Ericsson to explore how different input methods affect user interaction in MR. The project combined physical and virtual elements. With our Research-through-Design approach we collected user data to evaluate the methods' usability and inform design recommendations for smoother interactions in MR environments.",
+      route: "/projects/imrs", 
+      tableData: [ 
+        { label: "Technologies and Tools", value: "Mixed Reality, projection mapping, Unity, sensors, hand-tracking, physcial props and Figma" },
+        { label: "My role", value: "User research and UI design" }, 
+        { label: "Duration", value: "3 months in 2022" }]
     },
   
     {
