@@ -191,5 +191,11 @@ body {
   .image-row {
     flex-direction: column;
   }
+
+  .single-project-page project-info-table { 
+    display: block; 
+    max-width: 100%; 
+    margin: 0 auto 2rem auto; 
+  }
 }
 

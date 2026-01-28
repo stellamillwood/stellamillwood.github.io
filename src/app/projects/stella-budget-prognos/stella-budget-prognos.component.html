@@ -2,7 +2,9 @@
 <div class="page-container single-project-page">
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
-  <p>{{ project.description }}</p>
+  <!--<p>{{ project.description }}</p>-->
+  
+  <project-info-table [data]="project.tableData"></project-info-table>
 
   <h2>Stakeholder Request → Reframed Problem</h2>
   <p>The initiative originated from headquarters stakeholders — mainly business controllers and managers — who requested dashboards to provide quick 

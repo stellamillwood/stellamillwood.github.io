@@ -3,15 +3,18 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
 
-  <p>This <b>two-day project</b> involved designing the UI for Swedish Public Employment Office's new AI-based postal system. The agency processes 
+  <!-- <p>This <b>two-day project</b> involved designing the UI for Swedish Public Employment Office's new AI-based postal system. The agency processes 
     thousands of citizen documents daily, from medical records to unemployment benefits (A-kassa). Having previous experience in the old postal system, 
-    I was familiar with the users, their tasks, and the challenges the new system aimed to address.</p>
+    I was familiar with the users, their tasks, and the challenges the new system aimed to address.</p> -->
 
-  <p>When I reviewed the initial sketches, two things immediately stood out: 
-    (1) the information architecture was unclear for users who need to work quickly, and 
-    (2) the system’s conceptual model was hidden, requiring users to potentially guess how the new queue and workflow were intended to function. 
-    My work focused on clarifying these two aspects through language, hierarchy, and layout.
-  </p>
+  <project-info-table [data]="project.tableData"></project-info-table>
+
+  <p>When I reviewed the initial sketches, two things immediately stood out:</p>
+  <ul>
+    <li>the information architecture was unclear for users who need to work quickly, and </li>
+    <li>the system’s conceptual model was hidden, requiring users to potentially guess how the new queue and workflow were intended to function. </li>
+  </ul>
+  <p>My work focused on clarifying these two aspects through language, hierarchy, and layout.</p>
   
   <h2>The Users and Their Tasks</h2>
   <p>Administrators process incoming documents by manually identifying the citizen’s social security number, determining the document type, and 

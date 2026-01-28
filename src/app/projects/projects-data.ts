@@ -11,39 +11,50 @@ export interface Project {
   export const PROJECTS: Project[] = [
     {
       title: "Tajma",
-      subtitle: "Time reporting tool used daily by thousands of users at Swedish Public Emplyment Office.",
+      subtitle: "Time Reporting Tool at Arbetsförmedlingen",
       image: "assets/tajma/tajma-logo.png",
-      description: "Tajma is a time-reporting tool for internal users at Swedish Public Employment Office. It is built as a web application in Angular",
+      description: "Tajma is a time-reporting tool for internal users at Arbetsförmedlingen. It is built as a web application in Angular",
       route: "/projects/tajma", 
       tableData: [ 
-        { label: "Some facts", value: "Fact" },
-        { label: "Some facts", value: "Fact" },
-        { label: "Some facts", value: "Fact" } ]
+        { label: "Users", value: "All 11 000+ employees at Arbetsförmedlingen" },
+        { label: "Frontend Framework", value: "Angular" },
+        { label: "My Responsibilities", value: "UX design and frontend development" } ]
     }, 
     {
       title: "Stella Budget & Prognos",
-      subtitle: "Redesign of Swedish Public Employment Office's web application for budget and prognosis.",
+      subtitle: "Redesign of Budget & Prognosis Web Application",
       image: "assets/stella-budget-prognos/stella-budget-prognos-logo.png",
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
-        { label: "Some fact", value: "Fact" },
-        { label: "Some facts", value: "Fact" },
-        { label: "Some facts", value: "Fact" } ]      
+        { label: "Users", value: "Business controllers, operations coordinators and managers at Arbetsförmedlingen" },
+        { label: "My Responsibilities", value: "UX research, design direction, and stakeholder alignment" },
+        { label: "Constraints", value: "No recordings, domain complexity, external development" }, 
+        { label: "Duration", value: "6 months" }, 
+        { label: "Methods", value: "Exploratory interviews, user tests, affinity diagram, prioritization matrices" }]  
     }, 
     {
       title: "DigiPost",
-      subtitle: "AI streamlines handling of citizens’ incoming post at Swedish Public Employment Office.",
+      subtitle: "AI Streamlines Processing of Incoming Post from Citizens",
       image: "assets/digi-post/digi-post-logo.png",
       description: "DigiPost",
-      route: "/projects/digi-post"
+      route: "/projects/digi-post", 
+      tableData: [ 
+        { label: "Users", value: "Employees at Arbetsförmedlingen who process incoming post from citizens" },
+        { label: "My Role", value: "UI Designer" },
+        { label: "Duration", value: "2 days" } ]
     },
     {
       title: "Digital Stewardship",
-      subtitle: "Web Application for Environmental Sustainability Research",
+      subtitle: "Environmental Sustainability Research at Stockholm University",
       image: "assets/digital-stewardship/digital-stewardship-logo.png",
-      description: "Digital Stewardship was part of a research project at Stockholm University on improving waste sorting in shared residential recycling rooms. The work explored how digital tools and shared information could help residents coordinate and care for their recycling spaces. I developed a web interface for one of the design explorations and built its front end. The project ran for 3 years; I contributed for 10 months (2022–2023).",
-      route: "/projects/digital-stewardship"
+      description: "I was hired by Stockholm University to assist their research on exploring how waste sorting practices could improve through collective care for shared residential recycling rooms. I designed and built a project web application that allows users to (1) choose recycling room based on fullness, and (2) coordinate large waste pickups through carpooling.",
+      route: "/projects/digital-stewardship", 
+      tableData: [ 
+        { label: "Users", value: "Residents of a Housing Association in Northern Stockholm" },
+        { label: "My Role", value: "UX Design and Frontend development" },
+        { label: "Duration", value: "10 months" }, 
+        { label: "Methods", value: "Interviews, workshops, user journeys, wireframes and interactive prototypes" }]
     },
     {
       title: "ACDC",

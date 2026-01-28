@@ -4,18 +4,21 @@
   <h2>{{ project.subtitle }}</h2>
   <p>{{ project.description }}</p>
 
-  <h2>Context & Goal</h2>
-  <p>The research approached waste management as a collective and infrastructural practice and explored how real-time data and coordination tools 
-    could support residents in recycling more effectively. The interface was developed from interviews and workshops.</p>
+  <project-info-table [data]="project.tableData"></project-info-table>
+
   <img [src]="'assets/digital-stewardship/digital-stewardship-three-pages.png'"/>
   <p class="caption">Final refined UI on mobile.</p>
+
+  <h2>Context & Goal</h2>
+  <p>The research approached waste management as a collective and infrastructural practice and explored how real-time sensor data and coordination tools 
+    could support residents in recycling more effectively. The interface was developed from interviews and workshops.</p>
 
   <h2>My Contributions</h2>
   <ul>
     <li>Co-facilitated workshops and analyzed interview data</li>
     <li>Designed the interface and user journey in Figma</li>
     <li>Developed the web front end with JavaScript, HTML, and CSS</li>
-    <li>Used Git for version control and backup</li>
+    <!--<li>Used Git for version control and backup</li>-->
     <li>Mounted sensors and supported data integration</li>
   </ul>
 
