@@ -1,0 +1,20 @@
+<mat-drawer-container class="drawer-container">
+
+    <mat-drawer mode="side" opened>
+      <h3 class="vertical-menu-title">Projects</h3>
+      <mat-nav-list>
+        <a mat-list-item
+           *ngFor="let p of projects"
+           [routerLink]="p.route"
+           routerLinkActive="active">
+          {{ p.title }}
+        </a>
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <mat-drawer-content>
+      <ng-content></ng-content>
+    </mat-drawer-content>
+  
+  </mat-drawer-container>
+  

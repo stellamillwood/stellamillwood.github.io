@@ -1,0 +1,72 @@
+
+<div class="page-container single-project-page">
+  <h1>{{ project.title }}</h1>
+  <h2>{{ project.subtitle }}</h2>
+  <p>{{ project.description }}</p>
+
+  <h2>Stakeholder Request → Reframed Problem</h2>
+  <p>The initiative originated from headquarters stakeholders — mainly business controllers and managers — who requested dashboards to provide quick 
+    budget overviews and support faster action. Early discussions revealed the root issue was not visualization alone. Users struggled with navigation, information structure, and finding key actions 
+    across complex budget types. This reframed the assignment from “add dashboards” to “understand the workflow and problems across roles.”</p>
+
+  <img [src]="'assets/stella-budget-prognos/stella-budget-prognos-tabell.png'" class="img-border"/>
+  <p class="caption">This is a typical table in the budget application today - before any design updates. I've replaced the real data with dummy data. </p>
+
+  <h2>Organizational Dynamics</h2>
+  <p>Several departments expressed concern that previous initiatives were HQ-centric and did not represent users working closer to operational execution. 
+    This became a critical factor in how research was designed and how participants were selected.</p>
+
+  <h2>Exploratory Interviews and User Tests</h2>
+  <p>To ensure representation, I partnered with an experienced business controller from an underrepresented department to co-create an interview and 
+    user test script focused on workflows, pain points, tool switching, and data dependencies. Because recordings were prohibited, I reqruited a 
+    UX designer from another department took detailed notes during sessions.</p>
+
+  <h3>Scope</h3>
+  <ul>
+    <li>10 users</li>
+    <li>60-minute individual sessions</li>
+    <li>3 user roles: business controllers, operations coordinators, managers</li>
+    <li>3 departments represented across different mission areas</li>
+  </ul>
+
+  <h2>Analysis Through Affinity Mapping</h2>
+  <p>The insights were continuously validated with a business controller to ensure domain accuracy and reduce interpretation bias.</p>
+
+  <img [src]="'assets/stella-budget-prognos/stella-budget-prognos-affinity-map.png'" class="img-border"/>
+  <p class="caption">Affinity map of the tagged data.</p>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li>Challenges vary greatly depending on departmental budgets due to varying task complexity:
+      <ul>
+        <li>Personnel / maintenance budgets</li>
+        <li>Volume budgets linked to welfare program delivery</li>
+      </ul>
+    </li>
+    <li>Reliance on external tools</li>
+      <ul>
+        <li>Excel for most budget work (forcing manual synchronization)</li>
+        <li>PowerPoint for visualization instead of built-in capabilities</li>
+        <li>Calculators for converting values between reports</li>
+      </ul>
+  </ul>
+  <p>These bottlenecks affected both productivity and data reliability.</p>
+
+  <h2>Problem Statements</h2>
+  <p>Based on findings, I developed concise, actionable problem statements that reframed needs from “feature requests” into “workflow and 
+    information architecture needs” to guide upcoming design phases.</p>
+  <img [src]="'assets/stella-budget-prognos/image.png'" class="img-border"/>
+  <p class="caption">Problem statements</p>
+
+  <h2>Next Steps</h2>
+  <p>I will translate problem statements into validated design updates in production. Planned approach:</p>
+  <ul>
+    <li>Structured ideation with users to explore solutions</li>
+    <li>Technical feasibility vs problem relevance matrix with developers to prioritize improvements</li>
+    <li>Iterative validation through prototypes, user tests and stakeholder alignment</li>
+  </ul>
+
+  <!--<h2>Reflections</h2>
+  <p>The analysis helped me clarify what level of domain understanding was necessary for me as a UX designer to have, and where to set boundaries 
+    to avoid deep domain specialization while still solving the right problems.</p> -->
+</div>

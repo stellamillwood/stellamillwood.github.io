@@ -1,0 +1,17 @@
+<div class="page-container">
+    <h1>Projects</h1>
+    <div class="card-grid">
+      @for (project of projects; track project.title) {
+        @if (!project.hidden) {
+          <project-card
+            [title]="project.title"
+            [subtitle]="project.subtitle"
+            [image]="project.image"
+            [description]="project.description"
+            [route]="project.route">
+          </project-card>
+        }
+      }
+</div>
+
+
