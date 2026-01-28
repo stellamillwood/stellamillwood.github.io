@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table'
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table'
     MatButtonModule,
     MatIconModule,
     MatMenuModule, 
-    MatTableModule
+    MatTableModule, 
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

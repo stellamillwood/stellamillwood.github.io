@@ -1,0 +1,9 @@
+.before-after-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle {
+    margin-bottom: 0.5rem;
+}

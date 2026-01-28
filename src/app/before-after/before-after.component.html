@@ -1,0 +1,11 @@
+<div class="before-after-container"> 
+    <mat-button-toggle-group [(ngModel)]="state" class="toggle" name="beforeAfter"
+        aria-label="Before and After Toggle"> 
+        <mat-button-toggle value="before">Before</mat-button-toggle>
+        <mat-button-toggle value="after">After</mat-button-toggle> 
+    </mat-button-toggle-group> 
+    <img 
+        [src]="state === 'before' ? beforeSrc : afterSrc" 
+        class="img-border" 
+        alt="Before and after comparison" /> 
+</div>
