@@ -29,16 +29,20 @@
   <p class="caption">User journey for the application.</p>
 
   <h2>Wireframes</h2>
-  <img [src]="'assets/digital-stewardship/wireframe-start.png'" class="img-border"/>
-  <p class="caption">Start page wireframe showing bin fullness from different rooms in real time. Users could select the most convenient room before leaving their apartment.</p>
-  <img [src]="'assets/digital-stewardship/wireframe-wastepooling.png'" class="img-border"/>
-  <p class="caption">Wireframe for “WastePooling,” a feature allowing neighbors to coordinate shared trips for bulky waste disposal.</p>
+  <app-before-after
+    [beforeSrc]="'assets/digital-stewardship/wireframe-start.png'"
+    [afterSrc]="'assets/digital-stewardship/wireframe-wastepooling.png'"
+    beforeCaption="Start page wireframe showing bin fullness from different rooms in real time. Users could select the most convenient room before leaving their apartment."
+    afterCaption="Wireframe for “WastePooling,” a feature allowing neighbors to coordinate shared trips for bulky waste disposal.">
+  </app-before-after>
   
   <h2>Refined UI</h2>
-  <img [src]="'assets/digital-stewardship/digital-stewardship-start-refined.png'" class="img-border"/>
-  <p class="caption">Refined start page with sensor data.</p>
-  <img [src]="'assets/digital-stewardship/digital-stewardship-start-expanded-refined.png'" class="img-border"/>
-  <p class="caption">Expanded view showing bin details.</p>
-  <img [src]="'assets/digital-stewardship/digital-stewardship-wastepooling-refined.png'" class="img-border"/>
-  <p class="caption">Refined WastePooling UI.</p>
+  <app-before-after
+    [beforeSrc]="'assets/digital-stewardship/digital-stewardship-start-expanded-refined.png'"
+    [afterSrc]="'assets/digital-stewardship/digital-stewardship-wastepooling-refined.png'"
+    beforeCaption="Expanded view showing bin details."
+    afterCaption="Refined WastePooling UI.">
+  </app-before-after>
+  <!--<img [src]="'assets/digital-stewardship/digital-stewardship-start-refined.png'" class="img-border"/>
+  <p class="caption">Refined start page with sensor data.</p>-->
 </div>
