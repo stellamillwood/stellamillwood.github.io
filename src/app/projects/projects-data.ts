@@ -18,7 +18,7 @@ export interface Project {
       tableData: [ 
         { label: "Users", value: "All 11 000+ employees at Arbetsförmedlingen" },
         { label: "Technology", value: "Angular based web application" },
-        { label: "My Responsibilities", value: "UX design and frontend development" } ]
+        { label: "My Role", value: "UX design and frontend development" } ]
     }, 
     {
       title: "Stella Budget & Prognos",
@@ -28,7 +28,7 @@ export interface Project {
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
         { label: "Users", value: "Business controllers, operations coordinators and managers at Arbetsförmedlingen" },
-        { label: "My Responsibilities", value: "UX research, design direction, and stakeholder alignment" },
+        { label: "My Role", value: "UX research, design direction, and stakeholder alignment" },
         { label: "Constraints", value: "No recordings, domain complexity, external development" }, 
         { label: "Duration", value: "6 months 2025-2026" }, 
         { label: "Methods", value: "Exploratory interviews, user tests, affinity diagram, prioritization matrices" }]  
@@ -40,7 +40,7 @@ export interface Project {
       description: "DigiPost",
       route: "/projects/digi-post", 
       tableData: [ 
-        { label: "Users", value: "Administrators at Arbetsförmedlingen who process incoming post from citizens" },
+        { label: "Users", value: "Administrators at Arbetsförmedlingen" },
         { label: "My Role", value: "UI designer" },
         { label: "Duration", value: "2 days in 2025" } ]
     },

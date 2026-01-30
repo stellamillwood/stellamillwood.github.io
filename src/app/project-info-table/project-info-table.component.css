@@ -1,8 +1,9 @@
 .table-container {
-    background-color: var(--mat-sys-surface-container);
+    background-color: var(--md-sys-color-primary-container);
     border-radius: 16px;
     padding: 1rem;
     overflow: hidden; /* keeps table corners rounded */
+    margin: 2rem auto 2rem auto; 
   }
 
   .table-container table {
