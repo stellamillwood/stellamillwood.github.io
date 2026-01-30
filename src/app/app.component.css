@@ -1,28 +1,24 @@
 .toolbar-title {
-    font-size: 1.5rem;    /* adjust as needed */
-    font-weight: 600;      /* optional: makes it bold */
-    color: #333333;          /* match toolbar text color */
-    flex: 1 1 auto;
-  }
-  
+  flex: 1 1 auto;
+}
+
+.desktop-links {
+  display: flex;
+}
+
+.mobile-hamburger {
+  display: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 850px) {
   .desktop-links {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .mobile-hamburger {
     display: none;
   }
-  
-  .spacer {
-    flex: 1 1 auto;
+  .mobile-hamburger {
+    display: block;
   }
-  
-  @media (max-width: 850px) {
-    .desktop-links {
-      display: none;
-    }
-    .mobile-hamburger {
-      display: block;
-    }
-  }
+}

@@ -3,8 +3,12 @@
 // Typography
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--md-sys-color-on-surface-variant);
+  color: var(--md-sys-color-primary);
   margin: 0 0 0.5rem 0;
+}
+
+span {
+  color: var(--md-sys-color-on-surface-variant);
 }
 
 
