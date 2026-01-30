@@ -1,5 +1,42 @@
 @use '@angular/material' as mat;
 
+// Typography
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--md-sys-color-on-surface-variant);
+  margin: 0 0 0.5rem 0;
+}
+
+
+.primary-container h1,
+.primary-container h2,
+.primary-container h3,
+.primary-container h4,
+.primary-container h5,
+.primary-container h6 {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.secondary-container h1,
+.secondary-container h2,
+.secondary-container h3,
+.secondary-container h4,
+.secondary-container h5,
+.secondary-container h6 {
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.tertiary-container h1,
+.tertiary-container h2,
+.tertiary-container h3,
+.tertiary-container h4,
+.tertiary-container h5,
+.tertiary-container h6 {
+  color: var(--md-sys-color-on-tertiary-container);
+}
+
+
+
 // --------------------------------------------------------
 // Global Angular Material Theme
 // --------------------------------------------------------
@@ -8,7 +45,7 @@ html {
 
   // Angular Material M3 theme
   @include mat.theme((
-    typography: Roboto,
+    typography: Roboto, 
     density: 0,
   ));
 
@@ -117,11 +154,12 @@ html {
 // --------------------------------------------------------
 body {
   background-color: var(--md-sys-color-surface); // subtle light pinkish background
-  color: var(--md-sys-color-on-surface);
-  font: var(--mat-sys-body-medium);
+  color: var(--md-sys-color-on-surface-variant);
+  font: var(--mat-sys-body-large);
   margin: 0;
   min-height: 100vh;
 }
+
 // --------------------------------------------------------
 // Surface containers
 // --------------------------------------------------------
