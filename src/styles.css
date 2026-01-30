@@ -172,6 +172,8 @@ body {
 }
 
 
+/* on mobile styling */
+
 @media (max-width: 850px) {
   .page-container img:not(.card-img),
   .page-container img.img-border {

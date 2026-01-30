@@ -1,0 +1,7 @@
+.table-container {
+    background-color: var(--mat-sys-surface);
+    border-radius: 16px;
+    padding: 1rem;
+    overflow: hidden; /* keeps table corners rounded */
+  }
+  
