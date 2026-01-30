@@ -1,7 +1,12 @@
 .table-container {
-    background-color: var(--mat-sys-surface);
+    background-color: var(--mat-sys-surface-container);
     border-radius: 16px;
     padding: 1rem;
     overflow: hidden; /* keeps table corners rounded */
+  }
+
+  .table-container table {
+    background-color: inherit;
+    color: var(--mat-sys-on-surface);
   }
   

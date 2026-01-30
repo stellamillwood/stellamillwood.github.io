@@ -45,28 +45,18 @@ html {
   --md-sys-color-inverse-surface: rgb(47 49 42);
   --md-sys-color-inverse-on-surface: rgb(241 242 230);
   --md-sys-color-inverse-primary: rgb(177 209 138);
-  --md-sys-color-primary-fixed: rgb(205 237 163);
-  --md-sys-color-on-primary-fixed: rgb(16 32 0);
-  --md-sys-color-primary-fixed-dim: rgb(177 209 138);
-  --md-sys-color-on-primary-fixed-variant: rgb(53 78 22);
-  --md-sys-color-secondary-fixed: rgb(220 231 200);
-  --md-sys-color-on-secondary-fixed: rgb(21 30 11);
-  --md-sys-color-secondary-fixed-dim: rgb(191 203 173);
-  --md-sys-color-on-secondary-fixed-variant: rgb(64 74 51);
-  --md-sys-color-tertiary-fixed: rgb(188 236 231);
-  --md-sys-color-on-tertiary-fixed: rgb(0 32 30);
-  --md-sys-color-tertiary-fixed-dim: rgb(160 208 203);
-  --md-sys-color-on-tertiary-fixed-variant: rgb(31 78 75);
+
   --md-sys-color-surface-dim: rgb(218 219 208);
   --md-sys-color-surface-bright: rgb(249 250 239);
-  --md-sys-color-surface-container-lowest: rgb(255 255 255);
+
+  --md-sys-color-surface-container-lowest: rgb(249 250 239);
   --md-sys-color-surface-container-low: rgb(243 244 233);
   --md-sys-color-surface-container: rgb(238 239 227);
   --md-sys-color-surface-container-high: rgb(232 233 222);
   --md-sys-color-surface-container-highest: rgb(226 227 216);
 
   // --------------------------------------------------------
-  // Bridge Builder variables → Angular Material tokens
+  // Map MD variables → Angular Material variables
   // --------------------------------------------------------
   --mat-sys-primary: var(--md-sys-color-primary);
   --mat-sys-on-primary: var(--md-sys-color-on-primary);
@@ -116,41 +106,41 @@ html {
 // Body defaults
 // --------------------------------------------------------
 body {
-  color-scheme: light;
   background-color: var(--mat-sys-surface-container-lowest);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
 }
 
 // --------------------------------------------------------
-// Rounded Surface Containers
+// Surface containers
 // --------------------------------------------------------
+.surface-container-lowest { background-color: var(--mat-sys-surface-container-lowest); }
+.surface-container-low { background-color: var(--mat-sys-surface-container-low); }
+.surface-container { background-color: var(--mat-sys-surface-container); }
+.surface-container-high { background-color: var(--mat-sys-surface-container-high); }
+.surface-container-highest { background-color: var(--mat-sys-surface-container-highest); }
+
+// Rounded containers
+.surface,
 .surface-container,
 .surface-container-low,
 .surface-container-high,
-.surface-container-highest {
+.surface-container-highest,
+.primary-container,
+.secondary-container,
+.tertiary-container,
+.table-container {
   border-radius: 16px;
   padding: 1.5rem;
   margin: 1rem 0;
+  overflow: hidden;
 }
 
-// Map background colors for each surface container
-.surface-container-low {
-  background-color: var(--mat-sys-surface-container-low);
-}
-.surface-container {
-  background-color: var(--mat-sys-surface-container);
-}
-.surface-container-high {
-  background-color: var(--mat-sys-surface-container-high);
-}
-.surface-container-highest {
-  background-color: var(--mat-sys-surface-container-highest);
-}
-
-// Map background colors for all other containers
+// --------------------------------------------------------
+// Colored primary/secondary/tertiary containers
+// --------------------------------------------------------
 .primary-container {
   background-color: var(--mat-sys-primary-container);
   color: var(--mat-sys-on-primary-container);
@@ -166,24 +156,40 @@ body {
   color: var(--mat-sys-on-tertiary-container);
 }
 
-/* rounded corners on all containers */
-.surface,
-.surface-container,
-.surface-container-low,
-.surface-container-high,
-.surface-container-highest,
-.primary-container,
-.secondary-container,
-.tertiary-container {
+// --------------------------------------------------------
+// Buttons with proper fill
+// --------------------------------------------------------
+button[mat-raised-button],
+a[mat-raised-button] {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+button[mat-raised-button] mat-icon,
+a[mat-raised-button] mat-icon {
+  margin-right: 8px;
+}
+
+// --------------------------------------------------------
+// Optional: icon-only buttons
+// --------------------------------------------------------
+button[mat-icon-button],
+a[mat-icon-button] {
+  color: var(--mat-sys-on-surface);
+}
+
+// --------------------------------------------------------
+// Cards, tables, and other surface-based components
+// --------------------------------------------------------
+.mat-card {
+  background-color: var(--mat-sys-surface-container);
+  color: var(--mat-sys-on-surface);
   border-radius: 16px;
 }
 
-
-
-// --------------------------------------------------------
-// Optional: icon spacing in buttons
-// --------------------------------------------------------
-a[mat-raised-button] mat-icon,
-button[mat-raised-button] mat-icon {
-  margin-right: 8px;
+.mat-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background-color: var(--mat-sys-surface-container);
 }
