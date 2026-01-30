@@ -74,11 +74,10 @@ Old CSS for making text 75% width
 }
 
 
-
 /* 2. BORDER + SHADOW (only if img-border is present) */
 .page-container img.img-border {
   border: 2px solid #e0e0e0;
-  margin: 3rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -143,8 +142,10 @@ Old CSS for making text 75% width
 
 }
 
-.img-small {
-  max-width: 75%;
+@media (min-width: 850px) {
+  .img-small {
+    max-width: 75%;
+  }
 }
 
 .intro-table .mat-mdc-header-row { 
@@ -157,7 +158,7 @@ Old CSS for making text 75% width
 @media (max-width: 850px) {
   .page-container img:not(.card-img),
   .page-container img.img-border {
-    margin: 4rem auto 1rem auto !important;  /* override desktop margins */
+    margin: 1rem auto 1rem auto !important;  /* override desktop margins */
   }
 
   .page-container h1,
