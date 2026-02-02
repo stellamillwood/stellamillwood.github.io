@@ -11,12 +11,12 @@ export interface Project {
   export const PROJECTS: Project[] = [
     {
       title: "Tajma",
-      subtitle: "Time Reporting Tool at Arbetsförmedlingen",
+      subtitle: "Time Reporting Tool",
       image: "assets/tajma/tajma-logo.png",
-      description: "Tajma is a time-reporting tool for internal users at Arbetsförmedlingen. It is built as a web application in Angular",
+      description: "Tajma is a time-reporting tool for internal users at a government agency. It is built as a web application in Angular",
       route: "/projects/tajma", 
       tableData: [ 
-        { label: "Users", value: "All 11 000+ employees at Arbetsförmedlingen" },
+        { label: "Users", value: "All 11 000+ employees at the agency" },
         { label: "Technology", value: "Angular-based web application" },
         { label: "My Role", value: "UX design and front-end development" } ]
     }, 
@@ -27,7 +27,7 @@ export interface Project {
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
-        { label: "Users", value: "Business controllers, operations coordinators and managers at Arbetsförmedlingen" },
+        { label: "Users", value: "Business controllers, operations coordinators and managers at a large government agency" },
         { label: "My Role", value: "UX research, design direction, and stakeholder alignment" },
         { label: "Constraints", value: "No recordings, domain complexity, external development" }, 
         { label: "Duration", value: "6 months 2025-2026" }, 
@@ -40,7 +40,7 @@ export interface Project {
       description: "DigiPost",
       route: "/projects/digi-post", 
       tableData: [ 
-        { label: "Users", value: "Administrators at Arbetsförmedlingen" },
+        { label: "Users", value: "Administrators at a large government agency" },
         { label: "My Role", value: "UI designer" },
         { label: "Duration", value: "2 days in 2025" } ]
     },
@@ -68,7 +68,7 @@ export interface Project {
       title: "AGoodSite",
       subtitle: "Figma-based Design System for Museum Websites.",
       image: "assets/agoodsite/agoodsite-logo.png",
-      description: "AGoodId is a Stockholm-based design bureau where I completed a full-time design internship. My main assignment was to create a web-based design system for the company’s clients (mainly museums) to ensure cohesive and efficient design processes across projects.",
+      description: "I completed a full-time design internship at a Stockholm-based design bureau. My main assignment was to create a web-based design system for the company’s clients (mainly museums) to ensure cohesive and efficient design processes across projects.",
       route: "/projects/agoodsite", 
       tableData: [ 
         { label: "Users", value: "Art Directors at the design bureau (directly) and their clients (indirectly)" },
