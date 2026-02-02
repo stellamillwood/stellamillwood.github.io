@@ -11,7 +11,7 @@ export interface Project {
   export const PROJECTS: Project[] = [
     {
       title: "Tajma",
-      subtitle: "Time Reporting Tool",
+      subtitle: "Time Reporting Platform with 11,000+ Daily Users",
       image: "assets/tajma/tajma-logo_w_bg.svg",
       description: "Tajma is a time-reporting tool for internal users at a government agency. It is built as a web application in Angular",
       route: "/projects/tajma", 
@@ -22,7 +22,7 @@ export interface Project {
     }, 
     {
       title: "Drop the Beat",
-      subtitle: "AR Music-Sharing",
+      subtitle: "Augmented Reality Music‑Sharing Experience for Campus Social Discovery",
       image: "assets/drop-the-beat/drop-the-beat-logo.png",
       description: "A playful concept that lets students “drop” music around campus for others to discover. The idea grew from exploring how hybrid study reduced spontaneous encounters at university, and how immersive tech could make campus feel more social again. Users could spot virtual speakers in AR, tap them to listen, watch them animate, and optionally connect with the creator through social platforms.",
       route: "/projects/drop-the-beat", 
@@ -46,7 +46,7 @@ export interface Project {
     },
     {
       title: "IMRS",
-      subtitle: "A Mixed Reality Experience for Comparing Input Methods",
+      subtitle: "Mixed Reality Research for Evaluating Novel Interaction Methods",
       image: "assets/imrs/imrs-logo.png",
       description: "IMRS is a mixed reality tabletop experience developed in collaboration with Ericsson to explore how different input methods affect user interaction in MR. The project combined physical and virtual elements. With our Research-through-Design approach we collected user data to evaluate the methods' usability and inform design recommendations for smoother interactions in MR environments.",
       route: "/projects/imrs", 
@@ -57,7 +57,7 @@ export interface Project {
     },
     {
       title: "Stella Budget & Prognosis",
-      subtitle: "Redesign of Budget & Prognosis Web Application",
+      subtitle: "Redesign of a Mission‑Critical Budgeting & Forecasting System",
       image: "assets/stella-budget-prognos/stella-budget-prognos-logo.svg",
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
       route: "/projects/stella-budget-prognos", 
@@ -70,7 +70,7 @@ export interface Project {
     }, 
     {
       title: "Flourish",
-      subtitle: "A task-based mobile application for improving mental wellness using simulated AR for a growing plant.",
+      subtitle: "Task‑Based Wellness App with Simulated AR for Emotional Support",
       image: "assets/flourish/flourish-logo.png",
       description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing your teeth or getting out of bed.",
       route: "/projects/flourish", 
@@ -83,7 +83,7 @@ export interface Project {
     },
     {
       title: "DigiPost",
-      subtitle: "AI Streamlines Processing of Incoming Mail from Citizens",
+      subtitle: "AI‑Assisted Workflow for Processing Citizen Mail at Scale",
       image: "assets/digi-post/digi-post-logo.svg",
       description: "DigiPost",
       route: "/projects/digi-post", 
@@ -94,7 +94,7 @@ export interface Project {
     },
     {
       title: "ACDC",
-      subtitle: "Augmenting Complex and Dynamic (ACDC) is an augmented reality (AR) project on digital twins.",
+      subtitle: "Augmented Reality Digital Twin for Simulating Complex Public Environments",
       image: "assets/acdc/acdc-logo.png",
       description: "In this project me and my team simulated people crossing an intersection in Kista Galleria. The simulation was created using Unity and Figma and could be interacted with using a tablet. By using a toolbar a user could, for example, pause the simulation and add more people to it. This project lasted 3 months in 2022 and was part of the course Design for Complex and Dynamic Contexts. ",
       route: "/projects/acdc", 
@@ -126,7 +126,7 @@ export interface Project {
   
     {
       title: "Theses",
-      subtitle: "Master thesis and bachelor thesis at Stockholm Univeristy.",
+      subtitle: "Master’s & Bachelor’s Thesis at Stockholm University",
       image: "assets/theses/theses-logo.png",
       description: "Theses project description",
       route: "/projects/theses"
