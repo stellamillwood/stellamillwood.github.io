@@ -12,7 +12,7 @@ export interface Project {
     {
       title: "Tajma",
       subtitle: "Time Reporting Tool",
-      image: "assets/tajma/tajma-logo.svg",
+      image: "assets/tajma/tajma-logo_w_bg.svg",
       description: "Tajma is a time-reporting tool for internal users at a government agency. It is built as a web application in Angular",
       route: "/projects/tajma", 
       tableData: [ 
