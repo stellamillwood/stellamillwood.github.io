@@ -108,7 +108,7 @@ export interface Project {
       description: "G-Force is a VR experience where users kick a physical ball and see its motion mirrored in virtual reality. The ball behaves differently depending on the planet the user is on (Earth, Moon, or Mars), reflecting changes in gravity. Users can switch planets by interacting with a simple UI and traveling through a wormhole.",
       route: "/projects/g-force", 
       tableData: [ 
-        { label: "Technologies and Tools", value: "Virtual Reality (VR), Unity, sensors, physcial props and Figma" },
+        { label: "Technologies and Tools", value: "Virtual Reality (VR), Unity, sensors, physical props and Figma" },
         { label: "My role", value: "UX and UI design" }, 
         { label: "Duration", value: "3 months in 2022" }]
     },
@@ -119,7 +119,7 @@ export interface Project {
       description: "IMRS is a mixed reality tabletop experience developed in collaboration with Ericsson to explore how different input methods affect user interaction in MR. The project combined physical and virtual elements. With our Research-through-Design approach we collected user data to evaluate the methods' usability and inform design recommendations for smoother interactions in MR environments.",
       route: "/projects/imrs", 
       tableData: [ 
-        { label: "Technologies and Tools", value: "Mixed Reality, projection mapping, Unity, sensors, hand-tracking, physcial props and Figma" },
+        { label: "Technologies and Tools", value: "Mixed Reality, projection mapping, Unity, sensors, hand-tracking, physical props and Figma" },
         { label: "My role", value: "User research and UI design" }, 
         { label: "Duration", value: "3 months in 2022" }]
     },

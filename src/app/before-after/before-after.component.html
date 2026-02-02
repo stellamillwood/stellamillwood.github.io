@@ -1,9 +1,8 @@
 <div class="before-after-container"> 
-    <mat-button-toggle-group [(ngModel)]="state" class="toggle" name="beforeAfter"
-        aria-label="Before and After Toggle"> 
-        <mat-button-toggle value="before">Before</mat-button-toggle>
-        <mat-button-toggle value="after">After</mat-button-toggle> 
-    </mat-button-toggle-group> 
+    <mat-button-toggle-group [(ngModel)]="state" class="toggle" name="beforeAfter"> 
+        <mat-button-toggle value="before">{{beforeLabel }}</mat-button-toggle> 
+        <mat-button-toggle value="after">{{ afterLabel }}</mat-button-toggle>
+    </mat-button-toggle-group>
     <img 
         [src]="state === 'before' ? beforeSrc : afterSrc" 
         class="img-border img-small" 
@@ -11,3 +10,4 @@
 
     <p class="caption"> {{ state === 'before' ? beforeCaption : afterCaption }} </p>
 </div>
+
