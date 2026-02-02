@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-// Angular Material imports
+import { Component, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -12,4 +11,16 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {}
+
+export class AboutComponent implements AfterViewInit {
+
+  ngAfterViewInit(): void {
+    const video = document.querySelector('video') as HTMLVideoElement | null;
+
+    if (video) {
+      video.muted = true;
+      video.play().catch(() => {
+      });
+    }
+  }
+}
