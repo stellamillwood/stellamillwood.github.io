@@ -3,37 +3,37 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
 
-  <!-- <p>This <b>two-day project</b> involved designing the UI for Swedish Public Employment Office's new AI-based postal system. The agency processes 
-    thousands of citizen documents daily, from medical records to unemployment benefits (A-kassa). Having previous experience in the old postal system, 
+  <!-- <p>This <b>two-day project</b> involved designing the UI for Swedish Public Employment Office's new AI-based mailing system. The agency processes 
+    thousands of citizen documents daily, from medical records to unemployment benefits (A-kassa). Having previous experience in the old mailing system, 
     I was familiar with the users, their tasks, and the challenges the new system aimed to address.</p> -->
 
   <project-info-table [data]="project.tableData"></project-info-table>
   
   <h2>Context & Problem</h2>
-  <p>Administrators manually process large volumes of incoming post from citizens daily by identifying documents' key information and redirecting them 
+  <p>Administrators manually process large volumes of incoming mail from citizens daily by identifying documents' key information and redirecting them 
     to the correct processing systems. This work is repetitive, inefficient and error-prone.</p>
   
-  <h2>Communicating the New Work Flow</h2>
-  <p>The new postal system uses AI to identify key document information and users (1) validate the accuracy and (2) redirect documents to 
-    the correct system through a single-click button. The development team created a Figma sketch (toggle "before" below) to visualize the new work flow. 
-    I used that as a starting point and refined the sketch (toggle "after" below) to more clearly communicate the proposed work flow.</p>
+  <h2>Communicating the New Workflow</h2>
+  <p>The new mailing system uses AI to identify key document information and users (1) validate the accuracy and (2) redirect documents to 
+    the correct system through a single-click action. The development team created a Figma sketch (toggle "Before" below) to visualize the new workflow. 
+    I used that as a starting point and refined the sketch (toggle "After" below) to more clearly communicate the proposed workflow.</p>
 
   <app-before-after
     [beforeSrc]="'assets/digi-post/old-work-page.png'"
     [afterSrc]="'assets/digi-post/new-work-page.png'"
     beforeLabel="Before"
     afterLabel="After"
-    beforeCaption="The old start page with queue (arbetskö) and work space (arbetsyta). The queue is the area with Aktivitetsrapport (52)."
-    afterCaption="The redesigned work space page (arbetsyta).">
+    beforeCaption="The old start page with queue (arbetskö) and workspace (arbetsyta). The queue is the area with Aktivitetsrapport (52)."
+    afterCaption="The redesigned workspace page (arbetsyta).">
   </app-before-after>
 
-  <!--<img [src]="'assets/digi-post/old-work-page.png'" class="img-border img-small" alt="The old queue and work space page."/>
-  <p class="caption">The old start page with queue (arbetskö) and work space (arbetsyta). The queue is the area with "Aktivitetsrapport (52).</p>-->
+  <!--<img [src]="'assets/digi-post/old-work-page.png'" class="img-border img-small" alt="The old queue and workspace page."/>
+  <p class="caption">The old start page with queue (arbetskö) and workspace (arbetsyta). The queue is the area with "Aktivitetsrapport (52).</p>-->
 
   <h2>UI Challenges</h2>
   <ul>
-    <li>the information architecture was unclear for users who need to work quickly, and </li>
-    <li>the system’s conceptual model was hidden, requiring users to potentially guess how the new queue and workflow were intended to function. </li>
+    <li>The information architecture was unclear for users who need to work quickly, and </li>
+    <li>The system’s conceptual model was hidden, requiring users to potentially guess how the new queue and workflow were intended to function. </li>
   </ul>
   <p>My work focused on clarifying these two aspects through language, hierarchy, and layout.</p>
 
@@ -42,7 +42,7 @@
     <li>Applied our internal design system and patterns to reduce ambiguity, especially in form validation</li>
     <li>Reworked copy to clarify system status and interaction outcomes, and align language with the intended workflow</li>
     <li>Structured form hierarchy with sections and headings</li>
-    <li>Added user feedback from submitting document</li>
+    <li>Added user feedback after submitting a document</li>
   </ul>
 
   <app-before-after
@@ -60,7 +60,7 @@
   <img [src]="'assets/digi-post/new-doc-page.png'" class="img-border img-small" alt="New document page"/>
   <p class="caption">Updated document handling page.</p>-->
 
-  <!--<h3>The Queue and Work Space</h3>
+  <!--<h3>The Queue and Workspace</h3>
   <p>I used our internal design system and applied established design patterns. Working to reduce ambiguity, I reworked copy 
     (“Put back 43 documents…” → “You have 43 unhandled documents…” and “Put back” → “Put back 43 documents in the queue”) 
     so users would understand how many documents remained unhandled and what action the button performed. 
@@ -69,8 +69,8 @@
 
   <!-- <img [src]="'assets/digi-post/new-queue-page.png'" class="img-border" alt="The redesigned start page with queue"/>
   <p class="caption">The redesigned queue (arbetskö) in the start page.</p> -->
-  <!--<img [src]="'assets/digi-post/new-work-page.png'" class="img-border img-small" alt="The redesigned work space page"/>
-  <p class="caption">The redesigned work space page (arbetsyta).</p>-->
+  <!--<img [src]="'assets/digi-post/new-work-page.png'" class="img-border img-small" alt="The redesigned workspace page"/>
+  <p class="caption">The redesigned workspace page (arbetsyta).</p>-->
 
   <!--<h3>The Document Handling Page</h3>
   <p>I structured form fields into sections with hierarchical headings. For instance, the original sketch had “Month” and “Year” fields with no context. 
@@ -83,7 +83,7 @@
   </p> -->
 
   <img [src]="'assets/digi-post/new-doc-page-error-message.png'" class="img-border img-small" alt="Form validation in the new document page."/>
-  <p class="caption">Form validation in the new design.</p>
+  <p class="caption">Form validation on the new document page.</p>
 
   <!-- <img [src]="'assets/digi-post/new-doc-page-success-message.png'" class="img-border" alt="Confirmation message after successful registration in the new document page."/>
   <p class="caption">Confirmation message after successful registration.</p> -->

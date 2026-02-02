@@ -17,11 +17,11 @@ export interface Project {
       route: "/projects/tajma", 
       tableData: [ 
         { label: "Users", value: "All 11 000+ employees at Arbetsförmedlingen" },
-        { label: "Technology", value: "Angular based web application" },
-        { label: "My Role", value: "UX design and frontend development" } ]
+        { label: "Technology", value: "Angular-based web application" },
+        { label: "My Role", value: "UX design and front-end development" } ]
     }, 
     {
-      title: "Stella Budget & Prognos",
+      title: "Stella Budget & Prognosis",
       subtitle: "Redesign of Budget & Prognosis Web Application",
       image: "assets/stella-budget-prognos/stella-budget-prognos-logo.png",
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
@@ -35,7 +35,7 @@ export interface Project {
     }, 
     {
       title: "DigiPost",
-      subtitle: "AI Streamlines Processing of Incoming Post from Citizens",
+      subtitle: "AI Streamlines Processing of Incoming Mail from Citizens",
       image: "assets/digi-post/digi-post-logo.png",
       description: "DigiPost",
       route: "/projects/digi-post", 
@@ -48,11 +48,11 @@ export interface Project {
       title: "Digital Stewardship",
       subtitle: "Environmental Sustainability Research at Stockholm University",
       image: "assets/digital-stewardship/digital-stewardship-logo.png",
-      description: "I was hired by Stockholm University to assist their research on exploring how waste sorting practices could improve through collective care for shared residential recycling rooms. I designed and built a project web application that allows users to (1) choose recycling room based on fullness, and (2) coordinate large waste pickups through carpooling.",
+      description: "I was hired by Stockholm University to assist their research on exploring how waste sorting practices could improve through collective care for shared residential recycling rooms. I designed and built a project web application that allows users to (1) choose recycling room based on fullness, and (2) coordinate bulky waste pickups through carpooling.",
       route: "/projects/digital-stewardship", 
       tableData: [ 
         { label: "Users", value: "Residents of a housing association in northern Stockholm" },
-        { label: "My Role", value: "UX design and frontend development" },
+        { label: "My Role", value: "UX design and front-end development" },
         { label: "Duration", value: "10 months in 2022-2023" }, 
         { label: "Methods", value: "Interviews, workshops, user journeys, wireframes and interactive prototypes" }]
     },
@@ -72,7 +72,7 @@ export interface Project {
       route: "/projects/agoodsite", 
       tableData: [ 
         { label: "Users", value: "Art Directors at the design bureau (directly) and their clients (indirectly)" },
-        { label: "Methods & Tools", value: "Figma (autolayout, variants, styleguide and more) and competitive analysis" },
+        { label: "Methods & Tools", value: "Figma (Auto Layout, variants, style guide and more) and competitive analysis" },
         { label: "Duration", value: "6 months in 2021" }, 
         { label: "My role", value: "UI designer" }]
     },
@@ -92,7 +92,7 @@ export interface Project {
       title: "Flourish",
       subtitle: "A task-based mobile application for improving mental wellness using simulated AR for a growing plant.",
       image: "assets/flourish/flourish-logo.png",
-      description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing teeth or getting out of bed.",
+      description: "Flourish is a task-based mobile application designed during the COVID-19 pandemic to support mental wellness. Users complete daily tasks to help improve their mood, and a digital plant grows as tasks are completed. The plant can be viewed in simulated augmented reality (AR) and users can check in on friends’ plants. User interviews and workshops informed design iterations, including a toggle for ‘I feel bad’ that surfaces simpler tasks like brushing your teeth or getting out of bed.",
       route: "/projects/flourish", 
       tableData: [ 
         { label: "Users", value: "Remote students at Stockholm University" },
