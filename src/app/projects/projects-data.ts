@@ -56,9 +56,9 @@ export interface Project {
         { label: "Duration", value: "3 months in 2022" }]
     },
     {
-      title: "Stella Budget & Prognosis",
+      title: "Stella Budget & Prognos",
       subtitle: "Redesign of a Mission‑Critical Budgeting & Forecasting System",
-      image: "assets/stella-budget-prognos/stella-budget-prognos-logo.svg",
+      image: "assets/stella-budget-prognos/stella-budget-prognos-thumbnail.svg",
       description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
@@ -84,7 +84,7 @@ export interface Project {
     {
       title: "DigiPost",
       subtitle: "AI‑Assisted Workflow for Processing Citizen Mail at Scale",
-      image: "assets/digi-post/digi-post-logo.svg",
+      image: "assets/digi-post/digi-post-thumbnail.svg",
       description: "DigiPost",
       route: "/projects/digi-post", 
       tableData: [ 

@@ -1,5 +1,5 @@
 .table-container {
-    background-color: var(--md-sys-color-primary-container);
+    background-color: var(--md-sys-color-secondary-container);
     border-radius: 16px;
     padding: .5rem;
     overflow: hidden; /* keeps table corners rounded */
@@ -8,6 +8,6 @@
 
   .table-container table {
     background-color: inherit;
-    color: var(--mat-sys-on-surface);
+    color: var(--mat-sys-on-secondary);
   }
   
