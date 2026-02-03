@@ -29,7 +29,7 @@
       align-items: flex-start; /* aligns children left */
 
       video {
-        width: 80%;
+        width: 100%;
         max-width: 400px;
         aspect-ratio: 1 / 1; /* square */
         margin-bottom: 1.5rem; /* spacing between video and text */
