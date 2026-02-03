@@ -7,10 +7,21 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-span {
-  color: var(--md-sys-color-on-surface-variant);
+h1 {
+  font-weight: 900;
+  font-size: 32px;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+h3 {
+  font-weight: 700;
+  font-size: 14px;
+}
 
 .primary-container h1,
 .primary-container h2,
@@ -44,14 +55,14 @@ span {
 // --------------------------------------------------------
 // Global Angular Material Theme
 // --------------------------------------------------------
-html {
-  height: 100%;
 
-  // Angular Material M3 theme
+html {
   @include mat.theme((
-    typography: Roboto, 
+    typography: Inter,
     density: 0,
   ));
+
+
 
   // --------------------------------------------------------
   // Builder-exported Material 3 color variables
@@ -181,8 +192,7 @@ body {
 .surface-container-highest,
 .primary-container,
 .secondary-container,
-.tertiary-container,
-.table-container {
+.tertiary-container {
   border-radius: 16px;
   padding: 1.5rem;
   margin: 1rem 0;
