@@ -6,10 +6,10 @@
   
   <project-info-table [data]="project.tableData"></project-info-table>
 
-  <h2>Stakeholder Request → Reframed Problem</h2>
-  <p>The initiative originated from headquarters stakeholders (mainly business controllers and managers) who requested dashboards to provide quick 
-    budget overviews and support faster action. Early discussions revealed the root issue was not visualization alone. Users struggled with navigation, information structure, and finding key actions 
-    across complex budget types. This reframed the assignment from “add dashboards” to “understand the workflow and problems across roles.”</p>
+  <h2>Stakeholder Request → Reframed Need</h2>
+  <p>The initiative originated from headquarters stakeholders who, at first, requested dashboards with data visualizations. Early discussions revealed 
+    the root issue was not visualization alone. Users struggled with navigation, information structure, and finding key actions across complex budget 
+    types. This reframed the assignment from “add dashboards” to “research how users find and understand relevant data overviews and identify pain points”.</p>
 
   <h2>Original Interface</h2>
   <img [src]="'assets/stella-budget-prognos/tabell.png'" class="img-border" alt-text="Budget table"/>
@@ -20,9 +20,9 @@
     This became a critical factor in how research was designed and how participants were selected.</p>
 
   <h2>Exploratory Interviews and User Tests</h2>
-  <p>To ensure representation, I partnered with an experienced business controller from an underrepresented department to co-create an interview and 
-    user test script focused on workflows, pain points, tool switching, and data dependencies. Because recordings were prohibited, I recruited a 
-    UX designer from another department to take detailed notes during sessions.</p>
+  <p>To ensure representation, I partnered with an experienced business controller from an underrepresented department to co-create a combined
+     interview and user test script focused on workflows, pain points, tool switching, and data dependencies. Because recordings were prohibited, 
+     I recruited a UX designer from another department to take detailed notes during sessions.</p>
 
   <h3>Scope</h3>
   <ul>
@@ -40,20 +40,25 @@
 
   <h2>Key Findings</h2>
   <ul>
-    <li>Challenges vary greatly depending on departmental budgets due to varying task complexity:
+
+    <li>Unclear folder names and hierarchies make it difficult to find relevant data.
+    </li>
+    <li>Users, at times, depend on their memory to navigate the application.
+    </li>
+    <li>Difficult to compare data between reports to gain an overview.
       <ul>
-        <li>Personnel / maintenance budgets</li>
-        <li>Volume budgets linked to welfare program delivery</li>
+        <li>Pen, paper and calculator are sometimes used.</li>
       </ul>
     </li>
-    <li>Reliance on external tools</li>
+    <li>Lack of visual cues and guidance make it difficult to contextualize data, identify outliers, and perform actions with intent and understanding.
       <ul>
-        <li>Excel for most budget work (forcing manual synchronization)</li>
-        <li>PowerPoint for visualization instead of built-in capabilities</li>
-        <li>Calculators for converting values between reports</li>
+        <li>Trial and error is used, even by experienced users.</li>
+        <li>Manual work to recalulate and trace the data in order to understand it and put it into context.</li>
       </ul>
+    </li>
+    <li>Heavy reliance on Excel</li>
+    <li>Inconsistent ways to interpret the same data across systems make it difficult to understand the data.</li>
   </ul>
-  <p>These bottlenecks affected both productivity and data reliability.</p>
 
   <h2>Problem Statements</h2>
   <p>Based on findings, I developed concise, actionable problem statements that reframed needs from “feature requests” into “workflow and 
@@ -62,14 +67,11 @@
   <p class="caption">Problem statements</p>
 
   <h2>Next Steps</h2>
-  <p>I will translate problem statements into validated design updates in production. Planned approach:</p>
   <ul>
-    <li>Prioritize problems based on impact on workflow and efficiency, and low hanging fruit</li>
-    <li>Structured ideation with users to explore solutions</li>
-    <li>Filter ideas based on technical feasibility with developers</li>
-    <li>Iterative validation through prototypes, user tests and stakeholder alignment</li>
+    <li>Workshop with stakeholders to prioritize which challenges to focus on first.</li>
+    <li>Collaborate with consultant developers to understand the UI possibilities and limitations</li>
   </ul>
-
+  
   <!--<h2>Reflections</h2>
   <p>The analysis helped me clarify what level of domain understanding was necessary for me as a UX designer to have, and where to set boundaries 
     to avoid deep domain specialization while still solving the right problems.</p> -->
