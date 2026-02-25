@@ -57,9 +57,9 @@ export interface Project {
     },
     {
       title: "Stella Budget & Prognos",
-      subtitle: "Redesign of a Mission‑Critical Budgeting & Forecasting System",
+      subtitle: "UX Research on a Mission‑Critical Budgeting & Forecasting System",
       image: "assets/stella-budget-prognos/stella-budget-prognos-thumbnail.svg",
-      description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with redesigning the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
+      description: "The budget & prognosis application is used across organizational levels by business controllers, operations coordinators, and managers. I was tasked with improving the application’s UX. The system is developed externally, while I am responsible for UX research, design direction, and stakeholder alignment.",
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
         { label: "Users", value: "Business controllers, operations coordinators and managers at a large government agency" },
