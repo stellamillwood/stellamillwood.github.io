@@ -90,7 +90,6 @@ Old CSS for making text 75% width
 
 .video-wrapper {
   width: 100%;
-  margin: 4rem auto;
   position: relative;
   padding-top: 56.25%; /* 16:9 aspect ratio */
 }
@@ -112,7 +111,6 @@ Old CSS for making text 75% width
 }
 
 .page-container .caption {
-  margin-bottom: 3rem;   
   text-align: center;
   font-style: italic;
 }
