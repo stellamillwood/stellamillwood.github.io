@@ -3,10 +3,15 @@
   <h1>{{ project.title }}</h1>
   <h2>{{ project.subtitle }}</h2>
   <p>{{ project.description }}</p>
-  <img [src]="'assets/acdc/acdc-button-design.png'" class="img-border"/>
-  <h2>What I did</h2>
-  <p>I observed people’s behaviors in the intersection and, through a thematic analysis, created categories of how people navigated it. This data was then used to create the simulation. I also designed the UI for the toolbar. I created the style guide (above image) in Figma and sent it to the developers. The image below shows the final toolbar. </p>
-  <img [src]="'assets/acdc/acdc-toolbar.png'" class="img-border"/>
+
+  <project-info-table [data]="project.tableData"></project-info-table>
+
+  <h2>My contributions</h2>
+  <p>I observed pedestrian behavior at the intersection and used thematic analysis to identify categories of how people navigated it, which informed the simulation's design. I also designed the UI for the simulation app's toolbar.</p>
+  <!--<img [src]="'assets/acdc/acdc-toolbar.png'" class="img-border"/>
+
+  <img [src]="'assets/acdc/acdc-button-design.png'" class="img-border"/>-->
+
   <h2>Video</h2>
   <div class="video-wrapper">
     <iframe width="75%" height="700" src="https://www.youtube.com/embed/Loj6AkNImXg" title="ACDC - Final Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

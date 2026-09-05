@@ -18,7 +18,7 @@ export interface Project {
       tableData: [ 
         { label: "Users", value: "All 11 000+ employees at the agency" },
         { label: "Technology", value: "Angular-based web application" },
-        { label: "My Role", value: "UX design and front-end development" } ]
+        { label: "My Role", value: "UX and UI design and front-end development" } ]
     }, 
     {
       title: "Drop the Beat",
@@ -30,7 +30,7 @@ export interface Project {
         { label: "Users", value: "Remote and in-person students at Stockholm University" },
         { label: "Technologies and Tools", value: "Augmented Reality (AR), Unity and Figma" },
         { label: "Duration", value: "2 months in 2021" }, 
-        { label: "My role", value: "UX and UI designer" }]
+        { label: "My role", value: "UX and UI design" }]
     },
     {
       title: "Digital Stewardship",
@@ -40,7 +40,7 @@ export interface Project {
       route: "/projects/digital-stewardship", 
       tableData: [ 
         { label: "Users", value: "Residents of a housing association in northern Stockholm" },
-        { label: "My Role", value: "UX design and front-end development" },
+        { label: "My Role", value: "UX design, user research and front-end development" },
         { label: "Duration", value: "10 months in 2022-2023" }, 
         { label: "Methods", value: "Interviews, workshops, user journeys, wireframes and interactive prototypes" }]
     },
@@ -63,7 +63,7 @@ export interface Project {
       route: "/projects/stella-budget-prognos", 
       tableData: [ 
         { label: "Users", value: "Business controllers, operations coordinators and managers at a large government agency" },
-        { label: "My Role", value: "UX research, design direction, and stakeholder alignment" },
+        { label: "My Role", value: "User research, design direction, and stakeholder alignment" },
         { label: "Constraints", value: "No recordings, domain complexity, external development" }, 
         { label: "Duration", value: "6 months 2025-2026" }, 
         { label: "Methods", value: "Exploratory interviews, user tests, affinity diagram, prioritization matrices" }]  
@@ -96,9 +96,13 @@ export interface Project {
       title: "ACDC",
       subtitle: "Augmented Reality Digital Twin for Simulating Complex Public Environments",
       image: "assets/acdc/acdc-logo.png",
-      description: "In this project me and my team simulated people crossing an intersection in Kista Galleria. The simulation was created using Unity and Figma and could be interacted with using a tablet. By using a toolbar a user could, for example, pause the simulation and add more people to it. This project lasted 3 months in 2022 and was part of the course Design for Complex and Dynamic Contexts. ",
+      description: "A digital twin simulating pedestrian flow through a busy intersection, built from real-world behavioral research to support design decisions around traffic impact. Developed in Unity with a Figma-designed tablet interface for adjusting crowd density and pausing the simulation. The project was part of a university course, Design for Complex and Dynamic Contexts.",
       route: "/projects/acdc", 
-      hidden: true
+      tableData: [ 
+        { label: "Technologies and Tools", value: "Augmented Reality, Figma, Unity and Lego" },
+        { label: "My role", value: "User research and UI design" }, 
+        { label: "Duration", value: "3 months in 2022" }]
+      // hidden: true
     },
     {
       title: "G-Force",

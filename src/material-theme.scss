@@ -115,6 +115,7 @@ html {
   --md-sys-color-surface-bright: rgb(248 250 247);
   --md-sys-color-surface-container-lowest: rgb(255 255 255);
   --md-sys-color-surface-container-low: rgb(242 244 242);
+  /*--md-sys-color-surface-container-low: rgb(255, 255, 255);*/
   --md-sys-color-surface-container: rgb(237 238 236);
   --md-sys-color-surface-container-high: rgb(231 233 230);
   --md-sys-color-surface-container-highest: rgb(225 227 225);
@@ -151,7 +152,6 @@ html {
   --mat-sys-surface-bright: var(--md-sys-color-surface-bright);
 
   --mat-sys-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
-  --mat-sys-surface-container-low: var(--md-sys-color-surface-container-low);
   --mat-sys-surface-container-low: var(--md-sys-color-surface-container-low);
   --mat-sys-surface-container: var(--md-sys-color-surface-container);
   --mat-sys-surface-container-high: var(--md-sys-color-surface-container-high);
