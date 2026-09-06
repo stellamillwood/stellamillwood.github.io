@@ -93,18 +93,6 @@ export interface Project {
         { label: "Duration", value: "2 days in 2025" } ]
     },
     {
-      title: "ACDC",
-      subtitle: "Augmented Reality Digital Twin for Simulating Complex Public Environments",
-      image: "assets/acdc/acdc-logo.png",
-      description: "A digital twin simulating pedestrian flow through a busy intersection, built from real-world behavioral research to support design decisions around traffic impact. Developed in Unity with a Figma-designed tablet interface for adjusting crowd density and pausing the simulation. The project was part of a university course, Design for Complex and Dynamic Contexts.",
-      route: "/projects/acdc", 
-      tableData: [ 
-        { label: "Technologies and Tools", value: "Augmented Reality, Figma, Unity and Lego" },
-        { label: "My role", value: "User research and UI design" }, 
-        { label: "Duration", value: "3 months in 2022" }]
-      // hidden: true
-    },
-    {
       title: "G-Force",
       subtitle: "A VR Experience Exploring Sensory Alignment with Tangible Objects",
       image: "assets/g-force/g-force-logo.png",
@@ -127,7 +115,18 @@ export interface Project {
         { label: "Duration", value: "6 months in 2021" }, 
         { label: "My role", value: "UI designer" }]
     },
-  
+    {
+      title: "ACDC",
+      subtitle: "Augmented Reality Digital Twin for Simulating Complex Public Environments",
+      image: "assets/acdc/acdc-logo.png",
+      description: "A digital twin simulating pedestrian flow through a busy intersection, built from real-world behavioral research to support design decisions around traffic impact. Developed in Unity with a Figma-designed tablet interface for adjusting crowd density and pausing the simulation. The project was part of a university course, Design for Complex and Dynamic Contexts.",
+      route: "/projects/acdc", 
+      tableData: [ 
+        { label: "Technologies and Tools", value: "Augmented Reality, Figma, Unity and Lego" },
+        { label: "My role", value: "User research and UI design" }, 
+        { label: "Duration", value: "3 months in 2022" }]
+      // hidden: true
+    },
     {
       title: "Theses",
       subtitle: "Master’s & Bachelor’s Thesis at Stockholm University",
