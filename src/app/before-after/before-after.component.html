@@ -3,10 +3,10 @@
         <mat-button-toggle value="before">{{beforeLabel }}</mat-button-toggle> 
         <mat-button-toggle value="after">{{ afterLabel }}</mat-button-toggle>
     </mat-button-toggle-group>
-    <img 
-        [src]="state === 'before' ? beforeSrc : afterSrc" 
-        class="img-border img-small" 
-        alt="Before and after comparison" /> 
+    <img
+        [src]="state === 'before' ? beforeSrc : afterSrc"
+        class="img-border img-small"
+        [alt]="state === 'before' ? beforeAlt : afterAlt" />
 
     <p class="caption"> {{ state === 'before' ? beforeCaption : afterCaption }} </p>
 </div>

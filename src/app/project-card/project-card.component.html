@@ -1,12 +1,14 @@
-<mat-card (click)="navigate()" class="clickable-card">
+<a class="card-link" [routerLink]="route">
+  <mat-card class="clickable-card">
 
-  <img class="card-img" mat-card-image [src]="image" alt="{{ title }} thumbnail" />
+    <img class="card-img" mat-card-image [src]="image" alt="{{ title }} thumbnail" />
 
-  <mat-card-header>
-    <mat-card-title>{{ title }}</mat-card-title>
-  </mat-card-header>
+    <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+    </mat-card-header>
 
-  <mat-card-content>
-    <mat-card-subtitle class="card-text">{{ subtitle }}</mat-card-subtitle>
-  </mat-card-content>
-</mat-card>
+    <mat-card-content>
+      <mat-card-subtitle class="card-text">{{ subtitle }}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</a>

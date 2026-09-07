@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
     @Input() beforeCaption = '';
     @Input() afterCaption = '';
 
+    @Input() beforeAlt = '';
+    @Input() afterAlt = '';
+
     @Input() beforeLabel = 'Before'; 
     @Input() afterLabel = 'After'
 

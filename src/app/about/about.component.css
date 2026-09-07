@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -50,12 +54,14 @@
     object-fit: cover;
   }
 
-  .bullet-points {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
+}
+
+/* Top level, not nested: the contact band that uses this now sits outside .about-container */
+.bullet-points {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .contact-info {
@@ -69,13 +75,13 @@
   }
 }
 
+/* Full-bleed band. Rendered as a sibling of .page-container rather than inside it
+   (see about.component.html), so it fills the viewport on its own width: auto.
+   It used to use width: 100vw + translateX(-50%), but 100vw includes the scrollbar
+   width where scrollbars take layout space, which overflowed the page. */
 .contact-details {
   margin: 4rem 0 1rem 0;
   padding: 3rem;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;

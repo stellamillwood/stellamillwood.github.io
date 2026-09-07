@@ -4,6 +4,20 @@
   max-width: 100%;
 }
 
+/* The whole card is one link: inherit card text styling, keep a visible focus ring */
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px; /* matches mat-card, so the focus ring follows the card shape */
+}
+
+.card-link:focus-visible {
+  outline: 3px solid var(--md-sys-color-primary);
+  outline-offset: 3px;
+}
+
 .clickable-card {
   width: 100%; /* full width of the column */
   max-width: 100%;

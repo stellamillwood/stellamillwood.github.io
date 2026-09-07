@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 /**
  * @title ProjectCardComponent
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   standalone: true,
   templateUrl: 'project-card.component.html',
   styleUrls: ['project-card.component.css'],
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectCardComponent {
@@ -20,10 +20,4 @@ export class ProjectCardComponent {
   @Input() image!: string;
   @Input() description!: string;
   @Input() route!: string;
-
-  constructor(private router: Router) {}
-
-  navigate() {
-    this.router.navigate([this.route]);
-  }
 }
