@@ -43,6 +43,15 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
 - [x] **A3. Decorative logos use `alt="{{ title }}"`** — `src/app/project-card/project-card.component.html:3`.
   The card title is already adjacent text; these should be `alt=""`.
 
+  Resolved 2026-09-07 as `alt="{{ title }} thumbnail"`, Stella's call. The original
+  finding called these "decorative logos", which turned out to be wrong: only 6 of the
+  11 card images are wordmarks (Tajma, Stella Budget & Prognos, DigiPost, G-Force, ACDC,
+  Theses). The other 5 are informative thumbnails despite their `-logo` filenames —
+  Drop the Beat, Digital Stewardship and Flourish are three-phone UI mockups, IMRS is an
+  annotated photo carrying handwritten labels, AGoodSite is a colour palette with hex
+  codes. A blanket `alt=""` would have made those silent, so the interim `alt=""` fix
+  was replaced. Driven off the `title` input, so it cannot drift from `projects-data.ts`.
+
 - [ ] **A4. Project cards aren't links** — `src/app/project-card/project-card.component.html:1`
   is `<mat-card (click)="navigate()">`. Not keyboard-reachable, no focus ring, no
   `href` (so no cmd-click / middle-click / open-in-new-tab / copy-link), invisible
