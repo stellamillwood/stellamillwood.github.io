@@ -52,17 +52,17 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   codes. A blanket `alt=""` would have made those silent, so the interim `alt=""` fix
   was replaced. Driven off the `title` input, so it cannot drift from `projects-data.ts`.
 
-- [ ] **A4. Project cards aren't links** — `src/app/project-card/project-card.component.html:1`
+- [x] **A4. Project cards aren't links** — `src/app/project-card/project-card.component.html:1`
   is `<mat-card (click)="navigate()">`. Not keyboard-reachable, no focus ring, no
   `href` (so no cmd-click / middle-click / open-in-new-tab / copy-link), invisible
   to crawlers. Wrap in `<a [routerLink]="route">`; then delete `navigate()` and the
   `Router` injection in `project-card.component.ts`.
 
-- [ ] **A5. Invalid nesting on the résumé button** — `src/app/about/about.component.html:27-34`
+- [x] **A5. Invalid nesting on the résumé button** — `src/app/about/about.component.html:27-34`
   puts a `<button>` inside `<a href download>`. Interactive content inside an anchor
   is invalid HTML. Use `<a matButton="tonal" href=... download>` instead.
 
-- [ ] **A6. Horizontal scrollbar on the About page** — `src/app/about/about.component.css:72-77`
+- [x] **A6. Horizontal scrollbar on the About page** — `src/app/about/about.component.css:72-77`
   uses `width: 100vw` + `left: 50%` + `translateX(-50%)`. `100vw` includes the
   scrollbar width on platforms where scrollbars take layout space (Windows/Linux
   Chrome), so the landing page overflows. Use `width: 100%; margin-inline: calc(50% - 50vw)`,
@@ -79,17 +79,21 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
 - [x] **A9. Hamburger button has no `aria-label`** — `src/app/app.component.html:13`
   announces as an unlabeled button.
 
-- [ ] **A10. No wildcard route** — `src/app/app-routing.module.ts` has no
+- [x] **A10. No wildcard route** — `src/app/app-routing.module.ts` has no
   `{ path: '**' }`. Any dead or typo'd URL renders the toolbar and footer with an
   empty middle. `build:ghpages` copies `index.html` to `404.html`, so GitHub Pages
   hands *every* bad path to the app — this is the guaranteed outcome, not an edge case.
+
+  Fixed 2026-09-07 as `{ path: '**', redirectTo: '' }`, so a bad path shows the About
+  page. Chosen over a dedicated 404 component to keep it to one line; the trade-off is
+  that a typo'd URL looks like a working page rather than saying the link was wrong.
 
 - [ ] **A11. `npm test` is broken** — `src/app/app.component.spec.ts` is untouched CLI
   boilerplate: it asserts `.content span` contains `"myApp app is running!"` (markup
   that doesn't exist) and declares `AppComponent` without `RouterModule` or the
   Material modules its template needs. Write real specs or delete the file.
 
-- [ ] **A12. `before-after` hardcodes one `alt` for two different images** —
+- [x] **A12. `before-after` hardcodes one `alt` for two different images** —
   `src/app/before-after/before-after.component.html:9` renders a fixed
   `alt="Before and after comparison"` while `[src]` toggles between `beforeSrc` and
   `afterSrc`. The alt never changes with the image and describes neither one.

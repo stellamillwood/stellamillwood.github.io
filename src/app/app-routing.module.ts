@@ -27,7 +27,10 @@ const routes: Routes = [
   { path: 'projects/theses', component: ThesesComponent },
   { path: 'projects/tajma', component: TajmaComponent },
   { path: 'projects/stella-budget-prognos', component: StellaBudgetPrognosComponent },
-  { path: 'projects/digi-post', component: DigiPostComponent }
+  { path: 'projects/digi-post', component: DigiPostComponent },
+  // Dead or typo'd URLs land on About instead of an empty layout. build:ghpages
+  // copies index.html to 404.html, so GitHub Pages hands every unknown path here.
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
