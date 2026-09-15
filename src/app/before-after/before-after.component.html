@@ -6,7 +6,10 @@
     <img
         [src]="state === 'before' ? beforeSrc : afterSrc"
         class="img-border img-small"
-        [alt]="state === 'before' ? beforeAlt : afterAlt" />
+        [alt]="state === 'before' ? beforeAlt : afterAlt"
+        [attr.width]="state === 'before' ? beforeWidth : afterWidth"
+        [attr.height]="state === 'before' ? beforeHeight : afterHeight"
+        loading="lazy" />
 
     <p class="caption"> {{ state === 'before' ? beforeCaption : afterCaption }} </p>
 </div>

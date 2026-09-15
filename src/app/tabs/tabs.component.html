@@ -1,7 +1,7 @@
 <mat-tab-group>
     <mat-tab *ngFor="let tab of tabs" [label]="tab.label">
       <div class="tab-content">
-        <img [src]="tab.src" class="img-border img-small" alt="{{ tab.label }}" />
+        <img [src]="tab.src" class="img-border img-small" alt="{{ tab.label }}" [attr.width]="tab.width" [attr.height]="tab.height" loading="lazy" />
         <p class="caption">{{ tab.caption }}</p>
       </div>
     </mat-tab>

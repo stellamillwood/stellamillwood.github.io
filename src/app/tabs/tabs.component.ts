@@ -6,6 +6,8 @@ export interface ImageTab {
   label: string;
   src: string;
   caption: string;
+  width?: number;
+  height?: number;
 }
 
 @Component({

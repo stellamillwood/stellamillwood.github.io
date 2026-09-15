@@ -116,25 +116,59 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
 - [ ] **B1. 114 MB of assets, all of it shipped.** `src/assets` is 114 MB and
   `docs/assets` is a second copy (`.git` is 123 MB). Compress / resize:
 
-  | Size | File |
-  |---|---|
-  | 39.0 MB | `imrs/imrs-poster.pdf` |
-  | 22.3 MB | `theses/master-thesis.pdf` |
-  | 6.8 MB | `imrs/imrs-poster.png` |
-  | 6.1 MB | `stella-budget-prognos/affinity-map.png` |
-  | 5.6 MB | `agoodsite/agoodsite-pages.svg` (almost certainly embedded bitmaps, not vectors) |
-  | 2.2 MB | `stella-budget-prognos/tabell.svg` |
-  | 1.6 MB | `g-force/Gallery/hand_controllers.png` |
-  | 1.6 MB | `stella-budget-prognos/problem_statements.png` |
-  | 1.3 MB | `stella-budget-prognos/double-diamond..svg` (note the double dot in the name) |
+  | Size | File | Status |
+  |---|---|---|
+  | 39.0 MB | `imrs/imrs-poster.pdf` | Left as-is — a download, not page content |
+  | 22.3 MB | `theses/master-thesis.pdf` | Left as-is — a download, not page content |
+  | 6.8 MB | `imrs/imrs-poster.png` | → `imrs-poster.webp`, 2080×1470, 346 KB |
+  | 6.1 MB | `stella-budget-prognos/affinity-map.png` | → `affinity-map.webp`, 2080×937, 57 KB |
+  | 5.6 MB | `agoodsite/agoodsite-pages.svg` | **Dead file — not referenced anywhere.** Left in place, not deleted |
+  | 2.2 MB | `stella-budget-prognos/tabell.svg` | **Dead file — not referenced anywhere.** Left in place, not deleted |
+  | 1.6 MB | `g-force/Gallery/hand_controllers.png` | → `hand_controllers.webp`, same 1599×1600, 361 KB |
+  | 1.6 MB | `stella-budget-prognos/problem_statements.png` | → `problem_statements.webp`, 2080×878, 158 KB |
+  | 1.3 MB | `stella-budget-prognos/double-diamond..svg` | **Dead file — not referenced anywhere.** Left in place, not deleted |
 
-  WebP/AVIF at sensible dimensions should cut total page weight by ~90%. The two big
-  PDFs are downloads rather than page content, but they're in the deployed bundle and
-  in git history permanently.
+  Done 2026-09-15 for the four PNGs that are actually rendered: converted to WebP with
+  `cwebp -q 82`, resized to 2080px wide (2x the ~1040px CSS container width, since none
+  of these use `.img-small`) except `hand_controllers.png`, which was already
+  display-appropriate at 1599×1600 and only needed re-encoding. `<img>` `[src]` and
+  `width`/`height` updated at all 4 call sites (`imrs`, `stella-budget-prognos` ×2,
+  `g-force`'s `app-image-tabs`). Old PNGs removed via `git rm`. `src/assets` dropped
+  114 MB → 99 MB from this alone. Verified with a production build plus screenshots of
+  all 3 affected pages in a headless browser — images render undistorted.
 
-- [ ] **B2. No lazy loading or intrinsic dimensions** — none of the 34 `<img>` tags has
+  Three of the nine files in the original table turned out to be dead weight: the
+  `.component.html` files reference `agoodsite-pages.png`/`tabell.png` (not `.svg`), and
+  `double-diamond..svg` isn't referenced at all — `grep` across `src/app` for all three
+  filenames returns nothing. Left in place rather than deleted, Stella's call, so this
+  item stays open; deleting them would recover the other 9.1 MB with no compression
+  trade-off at all. The two PDFs are also untouched, per the original note that they're
+  downloads rather than page content — compressing a poster/thesis PDF risks visible
+  quality loss on something people actually read. Remaining before this can be checked
+  off: decide on the 3 dead SVGs, and decide whether the PDFs get compressed or stay as
+  the one accepted exception.
+
+- [x] **B2. No lazy loading or intrinsic dimensions** — none of the 34 `<img>` tags has
   `loading="lazy"`, `width`, or `height`. Project pages load every image up front and
   reflow as they arrive.
+
+  Fixed 2026-09-15. `loading="lazy"` added to every rendered `<img>` (commented-out ones
+  left untouched, per A2's precedent). Intrinsic `width`/`height` added everywhere the
+  source is fixed at compile time, read from each PNG/SVG with `identify`.
+
+  Two components needed real changes rather than just attributes, because their `<img>`
+  has more than one possible source per instance and the images in a set aren't the same
+  size: `before-after` toggles between `beforeSrc`/`afterSrc`, and `tabs` iterates over a
+  caller-supplied list. Both got new per-image `width`/`height` (`beforeWidth`/
+  `afterWidth`/... on `before-after`, mirroring A12's `beforeAlt`/`afterAlt`; `width`/
+  `height` added to `ImageTab` for `tabs`), wired from real dimensions at all 6
+  `before-after` call sites and the one `tabs` call site (g-force, 3 images).
+
+  `project-card.component.html`'s `<img>` is also multi-source (11 different project
+  thumbnails via one template) but was left without `width`/`height`: its CSS already
+  sets `aspect-ratio: 16/9` with `object-fit: cover` on `.card-img`, which reserves the
+  layout box independent of intrinsic size, so the attributes would have been redundant.
+  Got `loading="lazy"` only.
 
 - [ ] **B3. Single 706 kB bundle, over budget.** Build warns:
   `bundle initial exceeded maximum budget. Budget 500.00 kB was not met by 253.24 kB`.

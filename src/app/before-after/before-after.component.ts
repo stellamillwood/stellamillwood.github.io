@@ -20,6 +20,11 @@ import { FormsModule } from '@angular/forms';
     @Input() beforeAlt = '';
     @Input() afterAlt = '';
 
+    @Input() beforeWidth?: number;
+    @Input() beforeHeight?: number;
+    @Input() afterWidth?: number;
+    @Input() afterHeight?: number;
+
     @Input() beforeLabel = 'Before'; 
     @Input() afterLabel = 'After'
 
