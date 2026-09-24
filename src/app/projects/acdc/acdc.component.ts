@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PROJECTS, Project } from '../projects-data';
+import { Project, getProject } from '../projects-data';
 import { ProjectInfoTableComponent } from "@app/project-info-table/project-info-table.component";
 
 @Component({
@@ -10,5 +10,5 @@ import { ProjectInfoTableComponent } from "@app/project-info-table/project-info-
   imports: [ProjectInfoTableComponent]
 })
 export class ACDCComponent {
-  project: Project = PROJECTS.find(p => p.route === "/projects/acdc")!;
+  project: Project = getProject("/projects/acdc");
 }

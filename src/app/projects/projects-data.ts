@@ -135,3 +135,25 @@ export interface Project {
       route: "/projects/theses"
     }
 ];
+
+export type ProjectRoute =
+  | "/projects/tajma"
+  | "/projects/drop-the-beat"
+  | "/projects/digital-stewardship"
+  | "/projects/imrs"
+  | "/projects/stella-budget-prognos"
+  | "/projects/flourish"
+  | "/projects/digi-post"
+  | "/projects/g-force"
+  | "/projects/agoodsite"
+  | "/projects/acdc"
+  | "/projects/theses";
+
+/** Looks up a project by its route. Throws if projects-data.ts and the route ever drift apart. */
+export function getProject(route: ProjectRoute): Project {
+  const project = PROJECTS.find(p => p.route === route);
+  if (!project) {
+    throw new Error(`No project found for route "${route}"`);
+  }
+  return project;
+}

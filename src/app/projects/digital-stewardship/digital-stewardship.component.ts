@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PROJECTS, Project } from '../projects-data';
+import { Project, getProject } from '../projects-data';
 import { ProjectInfoTableComponent } from "@app/project-info-table/project-info-table.component";
 import { BeforeAfterComponent } from "@app/before-after/before-after.component";
 
@@ -12,5 +12,5 @@ import { BeforeAfterComponent } from "@app/before-after/before-after.component";
   imports: [ProjectInfoTableComponent, BeforeAfterComponent],
 })
 export class DigitalStewardshipComponent {
-  project: Project = PROJECTS.find(p => p.route === "/projects/digital-stewardship")!;
+  project: Project = getProject("/projects/digital-stewardship");
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PROJECTS, Project } from '../projects-data';
+import { Project, getProject } from '../projects-data';
 
 // Angular Material imports
 import { MatIconModule } from '@angular/material/icon';
@@ -14,5 +14,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './theses.component.css',
 })
 export class ThesesComponent {
-    project: Project = PROJECTS.find(p => p.route === "/projects/theses")!;
+    project: Project = getProject("/projects/theses");
 }

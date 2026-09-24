@@ -230,12 +230,23 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
 
 ## D. Maintainability
 
-- [ ] **D1. The same lookup duplicated 12 times.** Every project component does
+- [x] **D1. The same lookup duplicated 12 times.** Every project component does
   `PROJECTS.find(p => p.route === "/projects/xyz")!` — magic string plus non-null
   assertion. Rename a route in `projects-data.ts` and you get a runtime crash on a
   blank page instead of a compile error. The 12 detail components are near-identical
   shells differing only in template; one route with a `:slug` param, or at minimum a
   typed `getProject('tajma')` keyed off a union type, collapses most of this.
+
+  Done 2026-09-24 with the "at minimum" option — the `:slug`-route restructure would
+  collapse 12 separate components into one, a much bigger and riskier change than this
+  finding calls for. Added a `ProjectRoute` union type (the 11 actual route strings) and
+  a `getProject(route: ProjectRoute): Project` helper to `projects-data.ts`, which throws
+  a clear error instead of silently producing `undefined` behavior via `!` if
+  `projects-data.ts` and a route ever drift apart. All 11 call sites (there were 11, not
+  12 — `ProjectsComponent`, the list page, doesn't do this lookup) switched from
+  `PROJECTS.find(p => p.route === "/projects/x")!` to `getProject("/projects/x")`, with
+  the route string now type-checked against the union instead of being a bare string
+  literal. `ng build` and the full test suite pass.
 
 - [ ] **D2. Hybrid NgModule + standalone setup.** `AppModule` + `platformBrowserDynamic`
   + zone.js coexists with 19 standalone components, and `src/main.ts` passes

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { PROJECTS, Project } from '../projects-data';
+import { Project, getProject } from '../projects-data';
 import { ProjectInfoTableComponent } from '@app/project-info-table/project-info-table.component';
 import { BeforeAfterComponent } from "@app/before-after/before-after.component";
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -14,5 +14,5 @@ import {MatExpansionModule} from '@angular/material/expansion';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TajmaComponent {
-  project: Project = PROJECTS.find(p => p.route === "/projects/tajma")!;
+  project: Project = getProject("/projects/tajma");
 }
