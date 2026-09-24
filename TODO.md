@@ -113,7 +113,7 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
 
 ## B. Performance
 
-- [ ] **B1. 114 MB of assets, all of it shipped.** `src/assets` is 114 MB and
+- [x] **B1. 114 MB of assets, all of it shipped.** `src/assets` is 114 MB and
   `docs/assets` is a second copy (`.git` is 123 MB). Compress / resize:
 
   | Size | File | Status |
@@ -140,13 +140,13 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   Three of the nine files in the original table turned out to be dead weight: the
   `.component.html` files reference `agoodsite-pages.png`/`tabell.png` (not `.svg`), and
   `double-diamond..svg` isn't referenced at all — `grep` across `src/app` for all three
-  filenames returns nothing. Left in place rather than deleted, Stella's call, so this
-  item stays open; deleting them would recover the other 9.1 MB with no compression
-  trade-off at all. The two PDFs are also untouched, per the original note that they're
-  downloads rather than page content — compressing a poster/thesis PDF risks visible
-  quality loss on something people actually read. Remaining before this can be checked
-  off: decide on the 3 dead SVGs, and decide whether the PDFs get compressed or stay as
-  the one accepted exception.
+  filenames returns nothing.
+
+  Closed 2026-09-24: Stella copied all 3 dead SVGs out of the repo herself, then had them
+  `git rm`'d from both `src/assets` and `docs/assets` — 9.3 MB recovered with no
+  compression trade-off. The two PDFs are staying as the one accepted exception, Stella's
+  call: compressing a poster/thesis PDF risks visible quality loss on something people
+  actually read/download rather than just view on a page.
 
 - [x] **B2. No lazy loading or intrinsic dimensions** — none of the 34 `<img>` tags has
   `loading="lazy"`, `width`, or `height`. Project pages load every image up front and
