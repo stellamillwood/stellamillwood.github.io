@@ -294,10 +294,18 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   paths where relative reads fine; `@app` fixes the actual pain point, deep imports that
   used to need a `src/app/` prefix with no `../../..` climbing.
 
-- [ ] **D6. Direct DOM query instead of `viewChild`** —
+- [x] **D6. Direct DOM query instead of `viewChild`** —
   `src/app/about/about.component.ts:18` uses `document.querySelector('video')` in
   `ngAfterViewInit`, which grabs the first video anywhere on the page. Also: the
   autoplay loop ignores `prefers-reduced-motion`.
+
+  Done 2026-09-24. Swapped for a signal `viewChild<ElementRef<HTMLVideoElement>>` bound
+  to a new `#profileVideo` template ref, so it can only ever resolve this component's own
+  video. Removed the declarative `autoplay` attribute (which fires before any JS runs,
+  ignoring the media query) and instead call `.play()` from `ngAfterViewInit` only when
+  `matchMedia('(prefers-reduced-motion: reduce)').matches` is false. Verified with a
+  headless-Chromium check under both preferences: normal motion autoplays as before,
+  reduced motion leaves the video paused on its first frame, no console errors either way.
 
 - [ ] **D7. Inconsistent template syntax** — `*ngFor` + `CommonModule` in `tabs` and
   `before-after` vs `@for` in `projects`.

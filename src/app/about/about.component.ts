@@ -1,5 +1,5 @@
 
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, viewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 })
 
 export class AboutComponent implements AfterViewInit {
+
+  private readonly profileVideo = viewChild<ElementRef<HTMLVideoElement>>('profileVideo');
 
   /** Sep 2022 – Jun 2023 research assistant / UX engineer stint at SU. */
   private static readonly PRIOR_EXPERIENCE_MONTHS = 10;
@@ -37,12 +39,13 @@ export class AboutComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const video = document.querySelector('video') as HTMLVideoElement | null;
+    const video = this.profileVideo()?.nativeElement;
+    if (!video) return;
 
-    if (video) {
-      video.muted = true;
-      video.play().catch(() => {
-      });
-    }
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    video.muted = true;
+    video.play().catch(() => {});
   }
 }
