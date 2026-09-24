@@ -206,6 +206,10 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   toolbar/menu nav plus router/animations — shrinking further needs the full D2
   NgModule → `bootstrapApplication` migration, left as that separate item.
 
+  Update 2026-09-24: D2 closed the remaining gap. `bootstrapApplication` with
+  `provideAnimationsAsync()` moved the Material animations engine into a lazy chunk,
+  landing the initial bundle at 481.53 kB — under budget, no warning.
+
 ---
 
 ## C. Discoverability / SEO
@@ -248,7 +252,7 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   the route string now type-checked against the union instead of being a bare string
   literal. `ng build` and the full test suite pass.
 
-- [ ] **D2. Hybrid NgModule + standalone setup.** `AppModule` + `platformBrowserDynamic`
+- [x] **D2. Hybrid NgModule + standalone setup.** `AppModule` + `platformBrowserDynamic`
   + zone.js coexists with 19 standalone components, and `src/main.ts` passes
   `applicationProviders: [provideZoneChangeDetection()]` into `bootstrapModule`. The
   Angular 21 idiom is `bootstrapApplication(AppComponent, { providers: [provideRouter(routes), provideAnimationsAsync()] })`
@@ -256,6 +260,25 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   be deleted outright. `app.module.ts:18` still carries the note
   `// Only AppComponent; remove About/Project components if they are standalone`, and
   it imports `MatTableModule` / `MatButtonToggleModule` that only standalone children use.
+
+  Done 2026-09-24, done last as planned, once D1/D3/D5-D8 had already settled the pieces
+  it touches. `AppComponent` converted to `standalone: true` with its own `imports`
+  (`RouterLink`, `RouterOutlet`, the 4 Material modules its template uses). Routes moved
+  out of `app-routing.module.ts` into a plain `export const routes: Routes` in the new
+  `app.routes.ts`. `app.module.ts` and `app-routing.module.ts` deleted outright.
+  `main.ts` rewritten to `bootstrapApplication(AppComponent, { providers:
+  [provideZoneChangeDetection(), provideRouter(routes), provideAnimationsAsync()] })` —
+  used the idiom's exact suggestion, including `provideAnimationsAsync()` over the sync
+  `provideAnimations()`.
+
+  That last choice turned out to matter more than expected: swapping the eagerly-bundled
+  `BrowserAnimationsModule` for the async provider moved the whole Material animations
+  engine into a lazy chunk, and the initial bundle dropped from 559 kB to 481.53 kB —
+  **under** the 500 kB budget for the first time, closing out the last 59 kB B3 left
+  open. Verified with `ng build` (no budget warning at all now), `npm run build:ghpages`,
+  the full test suite, and a headless-Chromium pass covering About → Projects →
+  `/projects/tajma` card-click navigation and the mobile hamburger menu (which exercises
+  the Material animation now loaded async) — all correct, no console errors.
 
 - [x] **D3. Dead code to delete:**
   - `src/app/vertical-menu/` — component never used anywhere, plus its orphaned

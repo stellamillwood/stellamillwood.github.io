@@ -1,23 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent],
-    imports: [
-      NoopAnimationsModule,
-      RouterModule.forRoot([]),
-      MatToolbarModule,
-      MatButtonModule,
-      MatIconModule,
-      MatMenuModule
-    ]
+    imports: [AppComponent],
+    providers: [provideNoopAnimations(), provideRouter([])]
   }));
 
   it('should create the app', () => {
