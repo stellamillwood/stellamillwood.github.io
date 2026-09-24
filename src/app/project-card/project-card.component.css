@@ -56,11 +56,3 @@
 .clickable-card:hover {
   transform: scale(1.02);
 }
-
-.card-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;   /* number of lines you want */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-  

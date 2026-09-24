@@ -246,7 +246,7 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   `// Only AppComponent; remove About/Project components if they are standalone`, and
   it imports `MatTableModule` / `MatButtonToggleModule` that only standalone children use.
 
-- [ ] **D3. Dead code to delete:**
+- [x] **D3. Dead code to delete:**
   - `src/app/vertical-menu/` — component never used anywhere, plus its orphaned
     `/* Removed vertical-menu. Might bring back later. */` block at `src/styles.css:16-29`
   - `src/app/app.component.html:25-27` — `<ng-content>` inside an empty flex
@@ -259,6 +259,21 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
     passed by every caller but never rendered
   - Large commented-out markup blocks in `tajma.component.html`,
     `digi-post.component.html`, `acdc.component.html` — git history is the place for these
+
+  Done 2026-09-24, with one standing exception: Stella wants unused copy kept for
+  possible future reuse, not deleted, so the split was — delete genuinely codeless dead
+  weight, keep anything carrying text.
+
+  Removed: the `vertical-menu` component entirely (never referenced), its CSS note in
+  `styles.css`, the now-fully-vestigial `.page-layout`/`<ng-content>` wrapper in
+  `app.component.html` (its only other occupant, `vertical-menu`, was already gone), the
+  unused `.spacer` rule, the duplicate `.card-text` rule, the unused `title` property, and
+  the unused `panelOpenState` signal.
+
+  Kept, per the standing rule: the three components' large commented-out markup blocks
+  (real page copy), and `@Input() description` — it's the wiring for D4's per-project
+  copy, not copy itself, but removing it would mean stripping the `[description]` binding
+  from all 11 call sites too, which defeats reusing that copy later.
 
 - [ ] **D4. Placeholder copy in live data** — `projects-data.ts:88` has
   `description: "DigiPost"` and `:134` has `"Theses project description"`. Currently

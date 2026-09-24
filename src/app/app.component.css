@@ -10,10 +10,6 @@
   display: none;
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
-
 @media (max-width: 850px) {
   .desktop-links {
     display: none;
