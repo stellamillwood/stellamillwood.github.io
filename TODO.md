@@ -284,8 +284,15 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   those two projects, not something to fabricate. No user-facing impact today since
   nothing renders `description` (see D3). Revisit once real copy exists for both.
 
-- [ ] **D5. Import paths** — `import ... from 'src/app/...'` (absolute via `baseUrl`)
+- [x] **D5. Import paths** — `import ... from 'src/app/...'` (absolute via `baseUrl`)
   mixed with relative imports. Add a `paths` alias like `@app/*` and use it consistently.
+
+  Done 2026-09-24. Added `"@app/*": ["src/app/*"]` to `tsconfig.json`'s `paths` (inherited
+  by `tsconfig.app.json`/`tsconfig.spec.json` via `extends`). Rewrote the 13 absolute
+  `src/app/...` imports across 10 project components to `@app/...`. Relative imports
+  elsewhere (e.g. `../projects-data`) are left as-is — those are short, same-directory-ish
+  paths where relative reads fine; `@app` fixes the actual pain point, deep imports that
+  used to need a `src/app/` prefix with no `../../..` climbing.
 
 - [ ] **D6. Direct DOM query instead of `viewChild`** —
   `src/app/about/about.component.ts:18` uses `document.querySelector('video')` in

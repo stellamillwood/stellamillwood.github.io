@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PROJECTS, Project } from '../projects-data';
-import { ProjectInfoTableComponent } from "src/app/project-info-table/project-info-table.component";
-import { ImageTabsComponent } from "src/app/tabs/tabs.component";
+import { ProjectInfoTableComponent } from "@app/project-info-table/project-info-table.component";
+import { ImageTabsComponent } from "@app/tabs/tabs.component";
 
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PROJECTS, Project } from '../projects-data';
-import { ProjectInfoTableComponent } from "src/app/project-info-table/project-info-table.component";
+import { ProjectInfoTableComponent } from "@app/project-info-table/project-info-table.component";
 
 @Component({
   selector: 'app-acdc',
