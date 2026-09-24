@@ -1,33 +1,64 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { AGoodSiteComponent } from './projects/agoodsite/agoodsite.component';
-import { DigitalStewardshipComponent } from './projects/digital_stewardship/digital_stewardship.component';
-import { FlourishComponent } from './projects/flourish/flourish.component';
-import { IMRSComponent } from './projects/imrs/imrs.component';
-import { ACDCComponent } from './projects/acdc/acdc.component';
-import { GForceComponent } from './projects/g-force/g-force.component';
-import { DropTheBeatComponent } from './projects/drop-the-beat/drop-the-beat.component';
-import { ThesesComponent } from './projects/theses/theses.component';
-import { TajmaComponent } from './projects/tajma/tajma.component';
-import { StellaBudgetPrognosComponent } from './projects/stella-budget-prognos/stella-budget-prognos.component';
-import { DigiPostComponent } from './projects/digi-post/digi-post.component';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'projects/agoodsite', component: AGoodSiteComponent },
-  { path: 'projects/digital-stewardship', component: DigitalStewardshipComponent },
-  { path: 'projects/flourish', component: FlourishComponent },
-  { path: 'projects/imrs', component: IMRSComponent },
-  { path: 'projects/acdc', component: ACDCComponent },
-  { path: 'projects/g-force', component: GForceComponent },
-  { path: 'projects/drop-the-beat', component: DropTheBeatComponent },
-  { path: 'projects/theses', component: ThesesComponent },
-  { path: 'projects/tajma', component: TajmaComponent },
-  { path: 'projects/stella-budget-prognos', component: StellaBudgetPrognosComponent },
-  { path: 'projects/digi-post', component: DigiPostComponent },
+  {
+    path: 'projects',
+    loadComponent: () => import('./projects/projects.component').then(m => m.ProjectsComponent)
+  },
+  {
+    path: 'projects/agoodsite',
+    loadComponent: () => import('./projects/agoodsite/agoodsite.component').then(m => m.AGoodSiteComponent)
+  },
+  {
+    path: 'projects/digital-stewardship',
+    loadComponent: () =>
+      import('./projects/digital_stewardship/digital_stewardship.component').then(
+        m => m.DigitalStewardshipComponent
+      )
+  },
+  {
+    path: 'projects/flourish',
+    loadComponent: () => import('./projects/flourish/flourish.component').then(m => m.FlourishComponent)
+  },
+  {
+    path: 'projects/imrs',
+    loadComponent: () => import('./projects/imrs/imrs.component').then(m => m.IMRSComponent)
+  },
+  {
+    path: 'projects/acdc',
+    loadComponent: () => import('./projects/acdc/acdc.component').then(m => m.ACDCComponent)
+  },
+  {
+    path: 'projects/g-force',
+    loadComponent: () => import('./projects/g-force/g-force.component').then(m => m.GForceComponent)
+  },
+  {
+    path: 'projects/drop-the-beat',
+    loadComponent: () =>
+      import('./projects/drop-the-beat/drop-the-beat.component').then(m => m.DropTheBeatComponent)
+  },
+  {
+    path: 'projects/theses',
+    loadComponent: () => import('./projects/theses/theses.component').then(m => m.ThesesComponent)
+  },
+  {
+    path: 'projects/tajma',
+    loadComponent: () => import('./projects/tajma/tajma.component').then(m => m.TajmaComponent)
+  },
+  {
+    path: 'projects/stella-budget-prognos',
+    loadComponent: () =>
+      import('./projects/stella-budget-prognos/stella-budget-prognos.component').then(
+        m => m.StellaBudgetPrognosComponent
+      )
+  },
+  {
+    path: 'projects/digi-post',
+    loadComponent: () => import('./projects/digi-post/digi-post.component').then(m => m.DigiPostComponent)
+  },
   // Dead or typo'd URLs land on About instead of an empty layout. build:ghpages
   // copies index.html to 404.html, so GitHub Pages hands every unknown path here.
   { path: '**', redirectTo: '' }

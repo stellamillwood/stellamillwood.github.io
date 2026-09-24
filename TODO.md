@@ -170,10 +170,21 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   layout box independent of intrinsic size, so the attributes would have been redundant.
   Got `loading="lazy"` only.
 
-- [ ] **B3. Single 706 kB bundle, over budget.** Build warns:
+- [x] **B3. Single 706 kB bundle, over budget.** Build warns:
   `bundle initial exceeded maximum budget. Budget 500.00 kB was not met by 253.24 kB`.
   All 12 project pages are eagerly imported in `app-routing.module.ts`. Switch to
   `loadComponent: () => import('...').then(m => m.XComponent)`.
+
+  Done 2026-09-24. All 12 project routes in `app-routing.module.ts` converted to
+  `loadComponent`; only the `''` (About) route stays eager since it's the landing page.
+  Also removed `MatTableModule`/`MatButtonToggleModule` from `app.module.ts` — dead
+  imports noted in D2, since `project-info-table` and `before-after` already bring their
+  own standalone Material pieces and nothing in `AppComponent`'s template needs them.
+
+  Initial bundle: 757 kB → 559 kB (194 kB off). Budget overage: 253 kB → 59 kB. The
+  remaining 59 kB is core Angular/Material framework weight for the persistent
+  toolbar/menu nav plus router/animations — shrinking further needs the full D2
+  NgModule → `bootstrapApplication` migration, left as that separate item.
 
 ---
 
