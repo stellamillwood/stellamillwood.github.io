@@ -318,10 +318,20 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   check of the one caller (g-force's 3-tab gallery): all 3 tab labels render, switching
   tabs shows the right image, no console errors.
 
-- [ ] **D8. Naming inconsistencies** — `digital_stewardship/` is snake_case among
+- [x] **D8. Naming inconsistencies** — `digital_stewardship/` is snake_case among
   kebab-case siblings; `ImageTabsComponent` lives in `tabs/tabs.component.ts` with
   selector `app-image-tabs`; package name is still `my-app` and the Angular project
   is `myApp`.
+
+  Done 2026-09-24. `git mv`'d `digital_stewardship/` → `digital-stewardship/` and
+  `tabs/` → `image-tabs/` (all 4 files each, matching the component/selector names),
+  updating every `templateUrl`/`styleUrl`/import that pointed at the old paths
+  (`app-routing.module.ts`, `g-force.component.ts`, both specs). `package.json` name and
+  the `angular.json` project key went `my-app`/`myApp` → `portfolio`, with the 3
+  `buildTarget` references and the `dist/my-app` output path updated to match; `npm
+  install` resynced `package-lock.json`'s name field. `README.md`'s stale "# MyApp"
+  heading updated too. Verified with `ng build`, `npm run build:ghpages`, and the full
+  test suite — all pass; build output now lands in `dist/portfolio`.
 
 - [ ] **D9. Deploy is manual and fragile.** `build:ghpages` chains `mv`/`rm -r` (not
   portable, silently depends on `docs/browser` existing) and the output has to be

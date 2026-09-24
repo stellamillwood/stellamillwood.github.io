@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "build:ghpages": "ng build --output-path docs && mv docs/browser/* docs/ && rm -r docs/browser && cp docs/index.html docs/404.html", 

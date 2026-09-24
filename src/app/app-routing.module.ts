@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'projects/digital-stewardship',
     loadComponent: () =>
-      import('./projects/digital_stewardship/digital_stewardship.component').then(
+      import('./projects/digital-stewardship/digital-stewardship.component').then(
         m => m.DigitalStewardshipComponent
       )
   },

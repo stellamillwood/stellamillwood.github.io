@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageTabsComponent } from './tabs.component';
+import { ImageTabsComponent } from './image-tabs.component';
 
 describe('ImageTabsComponent', () => {
   let component: ImageTabsComponent;

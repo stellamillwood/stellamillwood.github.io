@@ -7,8 +7,8 @@ import { BeforeAfterComponent } from "@app/before-after/before-after.component";
 @Component({
   selector: 'app-digital-stewardship',
   standalone: true,
-  templateUrl: './digital_stewardship.component.html',
-  styleUrl: './digital_stewardship.component.css',
+  templateUrl: './digital-stewardship.component.html',
+  styleUrl: './digital-stewardship.component.css',
   imports: [ProjectInfoTableComponent, BeforeAfterComponent],
 })
 export class DigitalStewardshipComponent {

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DigitalStewardshipComponent } from './digital_stewardship.component';
+import { DigitalStewardshipComponent } from './digital-stewardship.component';
 
 describe('DigitalStewardshipComponent', () => {
   let component: DigitalStewardshipComponent;

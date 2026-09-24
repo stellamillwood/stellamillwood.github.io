@@ -13,8 +13,8 @@ export interface ImageTab {
   selector: 'app-image-tabs',
   standalone: true,
   imports: [MatTabsModule],
-  templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.css']
+  templateUrl: './image-tabs.component.html',
+  styleUrls: ['./image-tabs.component.css']
 })
 export class ImageTabsComponent {
   @Input() tabs: ImageTab[] = [];
