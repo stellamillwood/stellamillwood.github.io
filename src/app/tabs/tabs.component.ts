@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
-import { NgFor } from '@angular/common';
 
 export interface ImageTab {
   label: string;
@@ -13,7 +12,7 @@ export interface ImageTab {
 @Component({
   selector: 'app-image-tabs',
   standalone: true,
-  imports: [MatTabsModule, NgFor],
+  imports: [MatTabsModule],
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css']
 })

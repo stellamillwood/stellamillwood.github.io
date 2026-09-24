@@ -307,8 +307,16 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   headless-Chromium check under both preferences: normal motion autoplays as before,
   reduced motion leaves the video paused on its first frame, no console errors either way.
 
-- [ ] **D7. Inconsistent template syntax** — `*ngFor` + `CommonModule` in `tabs` and
+- [x] **D7. Inconsistent template syntax** — `*ngFor` + `CommonModule` in `tabs` and
   `before-after` vs `@for` in `projects`.
+
+  Done 2026-09-24. `before-after` turned out not to use `*ngFor`/`CommonModule` at all —
+  the original note was stale, its only structural directives are `MatButtonToggleGroup`/
+  `MatButtonToggle`/`FormsModule`. The real fix was `tabs.component.html`'s
+  `*ngFor="let tab of tabs"` → `@for (tab of tabs; track tab.src)`, and dropping the
+  now-unused `NgFor` import from `tabs.component.ts`. Verified with a headless-Chromium
+  check of the one caller (g-force's 3-tab gallery): all 3 tab labels render, switching
+  tabs shows the right image, no console errors.
 
 - [ ] **D8. Naming inconsistencies** — `digital_stewardship/` is snake_case among
   kebab-case siblings; `ImageTabsComponent` lives in `tabs/tabs.component.ts` with
