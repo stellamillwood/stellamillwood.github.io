@@ -280,6 +280,10 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   invisible only because `description` is never rendered (see D3), so wiring that input
   up would ship placeholder text.
 
+  Deliberately left open 2026-09-24 — writing real copy needs Stella's own words about
+  those two projects, not something to fabricate. No user-facing impact today since
+  nothing renders `description` (see D3). Revisit once real copy exists for both.
+
 - [ ] **D5. Import paths** — `import ... from 'src/app/...'` (absolute via `baseUrl`)
   mixed with relative imports. Add a `paths` alias like `@app/*` and use it consistently.
 
