@@ -1,9 +1,23 @@
 import { TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+      NoopAnimationsModule,
+      RouterModule.forRoot([]),
+      MatToolbarModule,
+      MatButtonModule,
+      MatIconModule,
+      MatMenuModule
+    ]
   }));
 
   it('should create the app', () => {
@@ -12,16 +26,25 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'myApp'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('myApp');
-  });
-
-  it('should render title', () => {
+  it('should render the site name in the toolbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('myApp app is running!');
+    expect(compiled.querySelector('.toolbar-title')?.textContent).toContain('Stella Millwood');
+  });
+
+  it('should render About and Projects nav links', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const linkTexts = Array.from(compiled.querySelectorAll('.desktop-links a')).map(a => a.textContent?.trim());
+    expect(linkTexts).toEqual(['About', 'Projects']);
+  });
+
+  it('should render the footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.site-footer')?.textContent).toContain('Built by Stella Millwood with Angular.');
   });
 });

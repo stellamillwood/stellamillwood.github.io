@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { VerticalMenuComponent } from './vertical-menu.component';
 
@@ -8,7 +9,8 @@ describe('VerticalMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VerticalMenuComponent]
+      imports: [VerticalMenuComponent],
+      providers: [provideRouter([])]
     })
     .compileComponents();
 

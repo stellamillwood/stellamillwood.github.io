@@ -88,10 +88,30 @@ for reference ("let's do #3"). Ordered by impact, not by effort.
   page. Chosen over a dedicated 404 component to keep it to one line; the trade-off is
   that a typo'd URL looks like a working page rather than saying the link was wrong.
 
-- [ ] **A11. `npm test` is broken** — `src/app/app.component.spec.ts` is untouched CLI
+- [x] **A11. `npm test` is broken** — `src/app/app.component.spec.ts` is untouched CLI
   boilerplate: it asserts `.content span` contains `"myApp app is running!"` (markup
   that doesn't exist) and declares `AppComponent` without `RouterModule` or the
   Material modules its template needs. Write real specs or delete the file.
+
+  Fixed 2026-09-24. Chain of issues, not just the one file:
+
+  - `node_modules` was stale — `karma`, `karma-jasmine`, `jasmine-core`, etc. were in
+    `package.json`/the lockfile but not actually installed, so `ng test` couldn't even
+    launch. Fixed with `npm install`.
+  - `tabs.component.spec.ts` imported a class named `TabsComponent`, but the component
+    was renamed to `ImageTabsComponent` (see D8) without updating the spec — a compile
+    error that blocked the *entire* suite from loading, not just that one file.
+  - `app.component.spec.ts` rewritten with real specs: toolbar site name, About/Projects
+    nav links, footer text. Needs `RouterModule.forRoot([])` (not just `provideRouter`,
+    since `AppComponent` is still NgModule-declared) plus the four Material modules its
+    template actually uses.
+  - Three other generated specs (`ProjectsComponent`, `VerticalMenuComponent`,
+    `ProjectCardComponent`) were failing with `NG0201: No provider found for
+    ActivatedRoute` — their standalone components use `routerLink`, but the boilerplate
+    `TestBed` config never provided a router. Added `provideRouter([])` to each.
+
+  All 22 specs pass via `CHROME_BIN=/usr/bin/google-chrome npx ng test --watch=false
+  --browsers=ChromeHeadless`. Production build unaffected.
 
 - [x] **A12. `before-after` hardcodes one `alt` for two different images** —
   `src/app/before-after/before-after.component.html:9` renders a fixed
